@@ -650,6 +650,18 @@
     [
       "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
       "Root"
+    ],
+    [
+      "82e8228b-8035-5ba1-9d1c-f5fda53854cf",
+      "Pi header"
+    ],
+    [
+      "cd8c5009-5c87-57e7-8895-17531f23ebe5",
+      "HAT signals"
+    ],
+    [
+      "bb96089d-18d0-5c67-bbce-836e9d264e2a",
+      "Power and drivers"
     ]
   ],
   "text_variables": {}

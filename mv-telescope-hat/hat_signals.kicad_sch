@@ -1,0 +1,1210 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "65a6f830-f399-5d40-9188-3b250a6dce5b")
+	(paper "A4")
+	(title_block
+		(title "HAT signals")
+		(date "2026-11-06")
+		(rev "v0")
+		(company "MV Astronomy")
+		(comment 1 "Owner: Ibrahim.")
+		(comment 2 "Pi signals in on the left, buffered driver lines out on the right.")
+	)
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "HAT SIGNALS  (owner: Ibrahim). This file is yours. Draw between the labels: left = from the Pi, right = out to the drivers.\nDon't rename or delete a label. They match the pins on the root page. Ask Eeshan if you need a new one.\n\nWHAT GOES ON THIS SHEET (full pin numbers: the notes on the Pi header sheet and README.md)\n  1. Buffer: symbol 74xx:74AHCT244 (same pinout), set its value to 74ACT244.  1A1-1A3 / 2A1-2A3 from the PUL, DIR, ENA labels,\n      1Y1-1Y3 / 2Y1-2Y3 to the *_DRV_* labels.  1OE + 2OE = BUF_OE_N with a 10k pull-up to +3V3.\n      VCC = +5V with a 100 nF cap to GND.  Unused inputs 1A4 and 2A4 to GND.\n  2. J301 / J302 (ALT / AZ driver terminals: 5V / PUL- / DIR- / ENA-) are placed already, because they anchor the cable\n      to the power sheet. Wire 1Y1-1Y3 / 2Y1-2Y3 onto their *_DRV_* wires and pick their screw-terminal footprint.\n  3. Limit switches: a connector per switch, 10k pull-up to +3V3 and 100 nF to GND on each line. Switch NC contact goes to GND.\n  4. Encoders: connector spots only (nothing bought yet). The Pi takes 3.3V max.\n  5. Give every part a footprint. Inspect > Electrical Rules Checker: 0 errors before you open a pull request.\nThe 'unconnected wire end' warnings on the short label wires go away once you wire to them."
+		(exclude_from_sim no)
+		(at 25.4 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "27755842-afe9-59c6-a800-ef281865158d")
+	)
+	(wire
+		(pts
+			(xy 38.1 76.2) (xy 43.18 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fb77a7c-6e54-5145-ac4f-df493fda9a7e")
+	)
+	(wire
+		(pts
+			(xy 223.52 73.66) (xy 241.3 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13930be0-113c-53fe-9568-491699ed243c")
+	)
+	(wire
+		(pts
+			(xy 38.1 96.52) (xy 43.18 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d022c60-94d8-555e-b1bf-5a07e8da0ae3")
+	)
+	(wire
+		(pts
+			(xy 38.1 58.42) (xy 43.18 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3532bfde-e159-58a8-9176-ca49195cf308")
+	)
+	(wire
+		(pts
+			(xy 38.1 60.96) (xy 43.18 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "389c102a-160c-5c2d-a1f3-533dfa60bcaa")
+	)
+	(wire
+		(pts
+			(xy 38.1 91.44) (xy 43.18 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e429ad1-1a87-5d64-8fa3-50049a595fe3")
+	)
+	(wire
+		(pts
+			(xy 223.52 58.42) (xy 241.3 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ef33d71-86fd-5aec-b5d0-e89d5798e1da")
+	)
+	(wire
+		(pts
+			(xy 38.1 55.88) (xy 43.18 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53944b68-d478-581f-8367-1a5694d15275")
+	)
+	(wire
+		(pts
+			(xy 38.1 86.36) (xy 43.18 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e0d0e88-8c7e-59ce-9b96-c62c1abec715")
+	)
+	(wire
+		(pts
+			(xy 236.22 68.58) (xy 241.3 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e50841b-e5dc-5e04-80ba-e51206d4c450")
+	)
+	(wire
+		(pts
+			(xy 38.1 88.9) (xy 43.18 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f3d14ac-7490-59b0-9c0e-1f04c9405e94")
+	)
+	(wire
+		(pts
+			(xy 38.1 53.34) (xy 43.18 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82f4089f-3698-526a-be0c-91ec74197c03")
+	)
+	(wire
+		(pts
+			(xy 223.52 71.12) (xy 241.3 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "832ed31d-7628-5a6c-84ae-7a8b4532d7dc")
+	)
+	(wire
+		(pts
+			(xy 38.1 71.12) (xy 43.18 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c441639-ef65-593c-aad6-952e88974dd0")
+	)
+	(wire
+		(pts
+			(xy 38.1 78.74) (xy 43.18 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a695c25-3f88-5da4-96cc-3f879b219b9b")
+	)
+	(wire
+		(pts
+			(xy 223.52 76.2) (xy 241.3 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f992b86-e8c2-5682-8a70-24bfad7e1ed7")
+	)
+	(wire
+		(pts
+			(xy 236.22 53.34) (xy 241.3 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a590953f-274a-517d-be0c-8b5ec99b7a3e")
+	)
+	(wire
+		(pts
+			(xy 223.52 55.88) (xy 241.3 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad27430d-4f59-5558-adf7-59bb1a84bcd1")
+	)
+	(wire
+		(pts
+			(xy 38.1 83.82) (xy 43.18 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2cc9d17-5eb7-59d6-9685-31f1def35d03")
+	)
+	(wire
+		(pts
+			(xy 38.1 66.04) (xy 43.18 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ced1281e-78eb-5367-ad11-4ca1be280b0c")
+	)
+	(wire
+		(pts
+			(xy 38.1 50.8) (xy 43.18 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8244dfc-e41e-550d-a573-15b494d0b9bf")
+	)
+	(wire
+		(pts
+			(xy 38.1 99.06) (xy 43.18 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d986eddc-06b1-5f08-bfda-5a4473e32e4b")
+	)
+	(wire
+		(pts
+			(xy 38.1 63.5) (xy 43.18 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0b1c31a-61d7-5fea-ba58-b278a8ccc8db")
+	)
+	(wire
+		(pts
+			(xy 223.52 60.96) (xy 241.3 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0fe0051-5e6f-5f15-a975-1ffb026f949b")
+	)
+	(wire
+		(pts
+			(xy 38.1 73.66) (xy 43.18 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff13521f-da82-585c-bea7-5ed4a7a289f8")
+	)
+	(hierarchical_label "ALT_ENA"
+		(shape input)
+		(at 38.1 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "008de286-d935-591c-8891-6643f900ef28")
+	)
+	(hierarchical_label "ALT_DRV_PUL"
+		(shape output)
+		(at 223.52 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "053edc2c-0aaa-5e7a-9513-f0e6594d1a15")
+	)
+	(hierarchical_label "AZ_ENA"
+		(shape input)
+		(at 38.1 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0e5b856e-0995-5e0e-89dc-206f791713f7")
+	)
+	(hierarchical_label "ALT_DRV_DIR"
+		(shape output)
+		(at 223.52 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0f164160-9673-594a-a596-8aaaf234b4f2")
+	)
+	(hierarchical_label "ALT_DIR"
+		(shape input)
+		(at 38.1 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2032f655-d759-5159-922b-8d3dec527d60")
+	)
+	(hierarchical_label "ALT_PUL"
+		(shape input)
+		(at 38.1 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2153e4c8-1a5b-5cef-90f1-4952118fed54")
+	)
+	(hierarchical_label "ALT_ENC_B"
+		(shape output)
+		(at 38.1 86.36 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "46743f9c-4c65-5616-bb6c-aa05fc5d6648")
+	)
+	(hierarchical_label "ALT_LIM_HIGH"
+		(shape output)
+		(at 38.1 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "56786678-f09a-5c51-bba2-09e361033916")
+	)
+	(hierarchical_label "BUF_OE_N"
+		(shape input)
+		(at 38.1 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "62f1226e-a840-575f-8982-57741a74c299")
+	)
+	(hierarchical_label "AZ_ENC_A"
+		(shape output)
+		(at 38.1 88.9 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "67366663-8844-5f6e-bcef-3d1db9c22c64")
+	)
+	(hierarchical_label "AZ_ENC_B"
+		(shape output)
+		(at 38.1 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6cba631d-eae1-53f1-adef-e2935a3b3b01")
+	)
+	(hierarchical_label "ALT_DRV_ENA"
+		(shape output)
+		(at 223.52 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "770f6eb0-2cd3-5721-a86f-549d09bc5009")
+	)
+	(hierarchical_label "AZ_LIM_CCW"
+		(shape output)
+		(at 38.1 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9181c31b-97a5-59b2-9069-7776b80dbc70")
+	)
+	(hierarchical_label "AZ_DRV_ENA"
+		(shape output)
+		(at 223.52 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "986cfe2a-3e31-59d6-b050-0992ada2ad30")
+	)
+	(hierarchical_label "AZ_DIR"
+		(shape input)
+		(at 38.1 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9e1a0861-33d4-506b-a059-6d491057fd12")
+	)
+	(hierarchical_label "AZ_DRV_DIR"
+		(shape output)
+		(at 223.52 73.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a74438c7-6048-5a5b-8477-d2c0f999493d")
+	)
+	(hierarchical_label "ALT_ENC_A"
+		(shape output)
+		(at 38.1 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "adc84cd1-b540-5bd2-ac3a-f45bc4dbba8e")
+	)
+	(hierarchical_label "AZ_PUL"
+		(shape input)
+		(at 38.1 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b0440a80-a7ee-583a-98e8-8ce0ed12c8be")
+	)
+	(hierarchical_label "ALT_LIM_LOW"
+		(shape output)
+		(at 38.1 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bdf9fa72-f472-5c9d-ac04-e0d65e84161f")
+	)
+	(hierarchical_label "SPARE_GPIO18"
+		(shape bidirectional)
+		(at 38.1 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cdcc6de9-d4d7-5078-a677-a7730ec579cd")
+	)
+	(hierarchical_label "AZ_LIM_CW"
+		(shape output)
+		(at 38.1 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d4db6c26-6d21-514e-9472-3710eb6abe02")
+	)
+	(hierarchical_label "SPARE_GPIO19"
+		(shape bidirectional)
+		(at 38.1 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d81991f8-3a9b-5ae5-83de-16bd1f75e6dd")
+	)
+	(hierarchical_label "AZ_DRV_PUL"
+		(shape output)
+		(at 223.52 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "de928847-1dbf-5e57-813a-02ca6931416a")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 246.38 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "10d91ad6-9900-52a8-a03a-7eff4cf40f9f")
+		(property "Reference" "J301"
+			(at 246.38 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ALT driver"
+			(at 246.38 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "ALT DM542T signal cable: 5V / PUL- / DIR- / ENA-. Footprint: Ibrahim picks the screw terminal."
+			(at 246.38 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "659d4a9d-1edc-5937-98df-5b55650e0adb")
+		)
+		(pin "2"
+			(uuid "aa196b1b-e354-5e34-a352-6c282ab905fa")
+		)
+		(pin "3"
+			(uuid "d6e4181a-aff3-553c-b4ee-eb1821f2aa63")
+		)
+		(pin "4"
+			(uuid "c979be8d-52be-5db9-aaff-b8b36c0215a8")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 236.22 68.58 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1a9a1168-8adb-5b99-b884-9b2d07cf52fa")
+		(property "Reference" "#PWR302"
+			(at 236.22 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 236.22 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 236.22 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7231f234-95a2-5560-ac3a-2dd1eb864209")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 236.22 53.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b163dc6d-d41a-51a0-b311-6db43734a459")
+		(property "Reference" "#PWR301"
+			(at 236.22 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 236.22 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 236.22 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b99040f-2f2f-51e3-a935-248afd6947f3")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 246.38 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c45c03b5-8bf7-5ea7-a9e9-27067a52c2e7")
+		(property "Reference" "J302"
+			(at 246.38 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AZ driver"
+			(at 246.38 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 246.38 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 246.38 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "AZ DM542T signal cable: 5V / PUL- / DIR- / ENA-. Footprint: Ibrahim picks the screw terminal."
+			(at 246.38 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "12b0c712-390e-5ad9-a19e-8e09f25c3df1")
+		)
+		(pin "2"
+			(uuid "1a17dcba-af51-52b7-af0f-732208cd1add")
+		)
+		(pin "3"
+			(uuid "58e9ab71-2dff-53c7-8f4b-c5e4e71e9472")
+		)
+		(pin "4"
+			(uuid "41430482-abdc-5306-bd13-eb45b90050c2")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J302")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

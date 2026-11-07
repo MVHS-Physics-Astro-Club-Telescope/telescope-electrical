@@ -1,0 +1,70 @@
+name: KiCad checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  erc:
+    # This job's name is the required status check on main. Rename it here and in branch protection together.
+    name: erc
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      # The image runs as user "kicad"; the checkout belongs to the runner, so run as root to read and write it.
+      options: --user root
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Electrical rules check (fails on any ERC error)
+        run: |
+          kicad-cli sch erc --severity-error --exit-code-violations --format report \
+            -o erc-errors.rpt mv-telescope-hat/mv-telescope-hat.kicad_sch \
+            || { cat erc-errors.rpt; exit 1; }
+
+      - name: Full ERC report (errors and warnings, to read)
+        if: always()
+        run: |
+          kicad-cli sch erc --format report -o erc-full.rpt mv-telescope-hat/mv-telescope-hat.kicad_sch
+          grep "ERC messages" erc-full.rpt
+
+      - name: Schematic PDF (every sheet)
+        if: always()
+        run: kicad-cli sch export pdf -o mv-telescope-electrical.pdf mv-telescope-hat/mv-telescope-hat.kicad_sch
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: schematic
+          path: |
+            mv-telescope-electrical.pdf
+            erc-full.rpt
+            erc-errors.rpt
+
+  publish:
+    # After a merge to main, put the PDF on the "latest-schematic" release so there is one link that is always current.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: erc
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: schematic
+
+      - name: Update the latest-schematic release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if ! gh release view latest-schematic > /dev/null 2>&1; then
+            gh release create latest-schematic --target "$GITHUB_SHA" \
+              --title "Latest schematic (main)" \
+              --notes "Rebuilt by CI after every merge to main. Download mv-telescope-electrical.pdf to see every sheet."
+          fi
+          gh release upload latest-schematic mv-telescope-electrical.pdf erc-full.rpt --clobber

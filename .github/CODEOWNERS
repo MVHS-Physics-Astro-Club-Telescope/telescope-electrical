@@ -1,0 +1,11 @@
+# GitHub asks these people to review any pull request that touches their files,
+# and main won't merge without a code owner's approval.
+#
+# Eeshan (electrical lead) owns the shared files: the root sheet map, the project file, the PCB,
+# the Pi header pin map and this CI setup.
+*                                          @soccerdude1812
+
+# Sheet owners. Eeshan stays listed on each so an owner's own pull request can still be approved.
+# Add Ibrahim's GitHub username on the hat_signals line once he has an account in the org.
+/mv-telescope-hat/hat_signals.kicad_sch    @soccerdude1812
+/mv-telescope-hat/power.kicad_sch          @soccerdude1812
