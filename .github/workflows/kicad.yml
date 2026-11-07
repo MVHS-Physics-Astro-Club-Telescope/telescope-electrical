@@ -20,6 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      - name: Use KiCad's default symbol and footprint libraries
+        # A fresh container has no library tables, so ERC can't compare symbols to the library and warns on every one.
+        run: |
+          mkdir -p "$HOME/.config/kicad/10.0"
+          cp /usr/share/kicad/template/sym-lib-table /usr/share/kicad/template/fp-lib-table "$HOME/.config/kicad/10.0/"
+
       - name: Electrical rules check (fails on any ERC error)
         run: |
           kicad-cli sch erc --severity-error --exit-code-violations --format report \
