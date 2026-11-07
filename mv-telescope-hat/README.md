@@ -1,14 +1,24 @@
 # MV Telescope Pi HAT: pin map (v1, 2026-10-31)
 
 KiCad 10 project started from KiCad's official `RaspberryPi-HAT` template: HAT board outline, M2.5 holes and the
-2x20 through-hole socket are already placed in the PCB. The schematic has only J1 (the 40-pin header).
-Its net labels are the pin map. This is the drop-in for Ibrahim's signal-side schematic: add the
-74ACT244, the driver terminals, the limit-switch and encoder connectors, and wire them to these labels.
+2x20 through-hole socket are already placed in the PCB. Since 2026-11-06 it is a hierarchical project with one
+sheet file per owner (see the repo README):
 
-Checked 2026-10-31: ERC 0 errors. The 17 warnings are "label connected to only one pin", one per
-signal, and they clear once each label is wired to a part. PCB DRC schematic parity: 0 issues. The netlist
-was compared pin by pin against the Raspberry Pi 4 reduced schematic (J8) and the BCM2711 datasheet
-(Table 94): 0 mismatches. The template's optional ID EEPROM was removed, so pins 27/28 are no-connects.
+- `mv-telescope-hat.kicad_sch`: root sheet map. Three blocks, and the wires between them are the agreed connections.
+- `pi_header.kicad_sch` (Eeshan): J1, the 40-pin header. Its 17 hierarchical labels are the pin map below.
+- `hat_signals.kicad_sch` (Ibrahim): the 74ACT244, driver terminals, limit-switch and encoder connectors. It starts
+  with the 17 Pi labels on the left and the driver terminals J301/J302 on the right.
+- `power.kicad_sch` (owner open): battery to DM542Ts, excluded from the board. It starts with the six driver-cable
+  labels.
+
+Checked 2026-10-31: the netlist was compared pin by pin against the Raspberry Pi 4 reduced schematic (J8) and
+the BCM2711 datasheet (Table 94), with 0 mismatches. The template's optional ID EEPROM was removed, so pins 27/28
+are no-connects.
+
+Checked 2026-11-06 after the split (KiCad 10.0.7): ERC 0 errors and 92 warnings, all placeholders that clear as the
+other sheets get drawn: 69 "label connected to only one pin" and 23 "unconnected wire endpoint". The PCB's J1
+pads keep their net names (/ALT_PUL and so on), because the root-page labels name each net. DRC schematic parity
+reports only J301/J302 "missing footprint": they're new and get a footprint when Ibrahim picks the terminal.
 
 ## Driver signals (Pi → 74ACT244 → DM542T, common anode)
 

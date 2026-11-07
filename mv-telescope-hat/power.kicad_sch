@@ -1,0 +1,153 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f160b309-f3b7-5801-ad08-af7b7f189f97")
+	(paper "A4")
+	(title_block
+		(title "Power and drivers")
+		(date "2026-11-06")
+		(rev "v0")
+		(company "MV Astronomy")
+		(comment 1 "Owner: Eeshan for now (open to a new member).")
+		(comment 2 "Off-board wiring: excluded from the PCB.")
+	)
+	(lib_symbols)
+	(text "POWER AND DRIVERS  (owner: Eeshan for now, open to a new member). The whole sheet is 'Exclude from board': none of it is on the HAT PCB.\nDon't rename or delete the labels. They are the cables from the HAT's two driver terminals.\n\nWHAT GOES ON THIS SHEET\n  Battery (12.8V LiFePO4) → 20A inline fuse → kill switch → WUPP fuse block\n      → 10A branch: Pegasus Pocket Powerbox Advance Gen 2\n      → 10A branch: Mean Well SD-50A-24 (24V) → both DM542T drivers, 1000 µF across each driver's supply → motors\n  Each DM542T: PUL- / DIR- / ENA- from the labels on the left. PUL+ / DIR+ / ENA+ to +5V. Logic selector set to 5V.\n  GND on this sheet = the Pi's ground. Name any other ground (e.g. BATT-, 24V_RTN) unless it really is wired to the Pi's ground.\n  The DM542T, PPBA and fuse block have no KiCad symbol: use a Connector_Generic block with the terminal names, or make one."
+		(exclude_from_sim no)
+		(at 25.4 22.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2a7bf813-e07f-5db5-a1c5-f64b7694f9ab")
+	)
+	(wire
+		(pts
+			(xy 38.1 50.8) (xy 43.18 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b1ff1c5-ddba-5030-9e88-5fb84c906bef")
+	)
+	(wire
+		(pts
+			(xy 38.1 63.5) (xy 43.18 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f088813-dbc9-557b-83ce-2649b458d839")
+	)
+	(wire
+		(pts
+			(xy 38.1 58.42) (xy 43.18 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b4f7fc3-5e76-56c9-aa30-bdbe3b51bd48")
+	)
+	(wire
+		(pts
+			(xy 38.1 53.34) (xy 43.18 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "653305f3-e4f8-5d60-8f3b-3345562ef35a")
+	)
+	(wire
+		(pts
+			(xy 38.1 55.88) (xy 43.18 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91d55562-7c78-51d2-b74c-6db28cf14ac9")
+	)
+	(wire
+		(pts
+			(xy 38.1 60.96) (xy 43.18 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7897ad2-4c66-57e4-a1f2-718df960796d")
+	)
+	(hierarchical_label "AZ_DRV_ENA"
+		(shape input)
+		(at 38.1 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1768aeb4-d459-5a9f-a358-d4637ae46c59")
+	)
+	(hierarchical_label "AZ_DRV_DIR"
+		(shape input)
+		(at 38.1 60.96 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "42f53c45-3caf-58fe-bc1e-c6dafa870ac5")
+	)
+	(hierarchical_label "ALT_DRV_PUL"
+		(shape input)
+		(at 38.1 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5408a2ef-fb2d-5653-b549-58972755b23e")
+	)
+	(hierarchical_label "ALT_DRV_DIR"
+		(shape input)
+		(at 38.1 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f511ce1-187c-50b4-85fa-7757f094bf3b")
+	)
+	(hierarchical_label "ALT_DRV_ENA"
+		(shape input)
+		(at 38.1 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bd98a2e9-6c11-5dba-a768-488b6b1d78bf")
+	)
+	(hierarchical_label "AZ_DRV_PUL"
+		(shape input)
+		(at 38.1 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f135e27a-83db-54bd-9fcd-7a83c1403752")
+	)
+)
