@@ -1858,7 +1858,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "HAT SIGNALS  (owner: Ibrahim). This file is yours. Draw between the labels: left = from the Pi, right = out to the drivers.\nDon't rename or delete a label. They match the pins on the root page. Ask Eeshan if you need a new one.\n\nWHAT GOES ON THIS SHEET (full pin numbers: the notes on the Pi header sheet and README.md)\n  1. Buffer: symbol 74xx:74AHCT244 (same pinout), set its value to 74ACT244.  1A1-1A3 / 2A1-2A3 from the PUL, DIR, ENA labels,\n      1Y1-1Y3 / 2Y1-2Y3 to the *_DRV_* labels.  1OE + 2OE = BUF_OE_N with a 10k pull-up to +3V3.\n      VCC = +5V with a 100 nF cap to GND.  Unused inputs 1A4 and 2A4 to GND.\n  2. J301 / J302 (ALT / AZ driver terminals: 5V / PUL- / DIR- / ENA-) are placed already, because they anchor the cable\n      to the power sheet. Wire 1Y1-1Y3 / 2Y1-2Y3 onto their *_DRV_* wires and pick their screw-terminal footprint.\n  3. Limit switches: a connector per switch, 10k pull-up to +3V3 and 100 nF to GND on each line. Switch NC contact goes to GND.\n  4. Encoders: connector spots only (nothing bought yet). The Pi takes 3.3V max.\n  5. Give every part a footprint. Inspect > Electrical Rules Checker: 0 errors before you open a pull request.\nThe 'unconnected wire end' warnings on the short label wires go away once you wire to them."
+	(text "HAT SIGNALS  (owner: Ibrahim). This file is yours. Draw between the labels: left = from the Pi, right = out to the drivers.\nDon't rename or delete a label. They match the pins on the root page. Ask Eeshan if you need a new one.\n\nWHAT GOES ON THIS SHEET (full pin numbers: the notes on the Pi header sheet and README.md)\n  1. Buffer U301 (74ACT244). Wire it by PIN NUMBER from the table in README.md, not by pin name: KiCad's symbol\n      names the channels 1A0-1A3 / 2A0-2A3 and runs the 2-side in the opposite order from TI's datasheet.\n      In -> out: ALT PUL 2->18, DIR 4->16, ENA 6->14.  AZ PUL 11->9, DIR 13->7, ENA 15->5.  Spare inputs 8 and 17 to GND.\n      1OE (1) + 2OE (19) = BUF_OE_N with a 10k pull-up to +3V3.  VCC (20) = +5V with a 100 nF cap to GND (10).\n  2. J301 / J302 (ALT / AZ driver terminals: 5V / PUL- / DIR- / ENA-) are placed already, because they anchor the cable\n      to the power sheet. U301 reaches them through the *_DRV_* labels.\n  3. Limit switches: a connector per switch, 10k pull-up to +3V3 and 100 nF to GND on each line. Switch NC contact goes to GND.\n  4. Encoders: connector spots only (nothing bought yet). The Pi takes 3.3V max.\n  5. Give every part a footprint. Inspect > Electrical Rules Checker: 0 errors before you open a pull request."
 		(exclude_from_sim no)
 		(at 25.4 22.86 0)
 		(effects
@@ -1924,12 +1924,6 @@
 		(uuid "be10165c-34d8-48a8-90c2-a63a1fb44e93")
 	)
 	(junction
-		(at 90.17 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c77bb3e3-913e-4e78-bd6f-7590c20e226f")
-	)
-	(junction
 		(at 110.49 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1942,7 +1936,7 @@
 		(uuid "cb866bca-b06e-44d6-acc8-fed4b025e68f")
 	)
 	(no_connect
-		(at 123.19 93.98)
+		(at 123.19 86.36)
 		(uuid "b4737e4b-4060-4428-94a2-0272a726762f")
 	)
 	(no_connect
@@ -1971,7 +1965,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 93.98) (xy 97.79 93.98)
+			(xy 93.98 86.36) (xy 97.79 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2091,7 +2085,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 86.36) (xy 128.27 86.36)
+			(xy 123.19 93.98) (xy 128.27 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2141,7 +2135,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 86.36) (xy 97.79 86.36)
+			(xy 86.36 93.98) (xy 97.79 93.98)
 		)
 		(stroke
 			(width 0)
@@ -2171,7 +2165,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 88.9) (xy 97.79 88.9)
+			(xy 86.36 91.44) (xy 97.79 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2451,7 +2445,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 88.9) (xy 123.19 88.9)
+			(xy 128.27 91.44) (xy 123.19 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2551,7 +2545,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.19 91.44) (xy 128.27 91.44)
+			(xy 123.19 88.9) (xy 128.27 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2599,16 +2593,7 @@
 		)
 		(uuid "e7e854db-c312-4b52-b9f0-4b43c9e5eb84")
 	)
-	(wire
-		(pts
-			(xy 90.17 106.68) (xy 90.17 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea93649d-1cae-485c-8762-0957ff743ac0")
-	)
+
 	(wire
 		(pts
 			(xy 72.39 140.97) (xy 93.98 140.97)
@@ -2631,7 +2616,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 91.44) (xy 97.79 91.44)
+			(xy 86.36 88.9) (xy 97.79 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2722,7 +2707,7 @@
 	)
 	(hierarchical_label "AZ_ENA"
 		(shape input)
-		(at 86.36 91.44 180)
+		(at 86.36 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2742,14 +2727,13 @@
 		)
 		(uuid "169d1215-eeff-4d40-a609-a4cf2c964aba")
 	)
-	(hierarchical_label "ALT_DRV_ENA"
-		(shape input)
+	(label "ALT_DRV_ENA"
 		(at 128.27 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
 		(uuid "1fb1d1e0-6c32-4e76-9c9b-29355b2ee138")
 	)
@@ -2808,25 +2792,23 @@
 		)
 		(uuid "46743f9c-4c65-5616-bb6c-aa05fc5d6648")
 	)
-	(hierarchical_label "ALT_DRV_PUL"
-		(shape input)
+	(label "ALT_DRV_PUL"
 		(at 128.27 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
 		(uuid "51227aa9-9c14-4556-836b-f070557dcc5c")
 	)
-	(hierarchical_label "AZ_DRV_PUL"
-		(shape input)
-		(at 128.27 86.36 0)
+	(label "AZ_DRV_PUL"
+		(at 128.27 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
 		(uuid "53dfa504-2d09-4844-9852-64f394918c37")
 	)
@@ -2841,14 +2823,13 @@
 		)
 		(uuid "56786678-f09a-5c51-bba2-09e361033916")
 	)
-	(hierarchical_label "ALT_DRV_DIR"
-		(shape input)
+	(label "ALT_DRV_DIR"
 		(at 128.27 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
 		(uuid "5b04e5dd-fede-4431-92a2-65bb772dd6bb")
 	)
@@ -2896,14 +2877,13 @@
 		)
 		(uuid "7286d977-b26c-4392-8ec9-cb0203986069")
 	)
-	(hierarchical_label "AZ_DRV_ENA"
-		(shape input)
-		(at 128.27 91.44 0)
+	(label "AZ_DRV_ENA"
+		(at 128.27 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
 		(uuid "7b5427dd-406f-4184-abdf-50a9b63ad1e5")
 	)
@@ -2920,7 +2900,7 @@
 	)
 	(hierarchical_label "AZ_DIR"
 		(shape input)
-		(at 86.36 88.9 180)
+		(at 86.36 91.44 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2953,7 +2933,7 @@
 	)
 	(hierarchical_label "AZ_PUL"
 		(shape input)
-		(at 86.36 86.36 180)
+		(at 86.36 93.98 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3017,14 +2997,13 @@
 		)
 		(uuid "d81991f8-3a9b-5ae5-83de-16bd1f75e6dd")
 	)
-	(hierarchical_label "AZ_DRV_DIR"
-		(shape input)
-		(at 128.27 88.9 0)
+	(label "AZ_DRV_DIR"
+		(at 128.27 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify left bottom)
 		)
 		(uuid "f0133130-6aa4-4d7e-a1f0-b338d92fe159")
 	)
@@ -3040,7 +3019,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06a3b14b-2369-4c5b-906c-7337ba8984e1")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR0308"
 			(at 97.79 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -3099,9 +3078,9 @@
 			(uuid "e307a808-71c5-4200-a3e0-cf8fa2f8fb36")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR05")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0308")
 					(unit 1)
 				)
 			)
@@ -3119,7 +3098,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07cf56a9-bdad-4c90-8050-e1e1568cc12e")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0310"
 			(at 100.33 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -3178,9 +3157,9 @@
 			(uuid "7a89b589-2da7-4f9e-9835-068f1023257d")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR07")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0310")
 					(unit 1)
 				)
 			)
@@ -3198,7 +3177,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0832835b-22b5-4287-85fd-f05a08d8f8a4")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR0322"
 			(at 96.52 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3257,9 +3236,9 @@
 			(uuid "e8e0edb7-fef6-4389-8cf3-fab810ffa22f")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR019")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0322")
 					(unit 1)
 				)
 			)
@@ -3277,7 +3256,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ba4ff86-251b-410f-85c5-a87e1ba2b6b6")
-		(property "Reference" "R1"
+		(property "Reference" "R301"
 			(at 92.71 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3339,9 +3318,9 @@
 			(uuid "e2d94b11-9eae-4d30-9227-8b533a74e386")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "R1")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R301")
 					(unit 1)
 				)
 			)
@@ -3359,7 +3338,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0eb95e22-5f1a-47bd-8292-67e95160f387")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR0313"
 			(at 148.59 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -3418,9 +3397,9 @@
 			(uuid "71454990-5efe-423d-93e0-3a9b5dc8f4f8")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR010")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0313")
 					(unit 1)
 				)
 			)
@@ -3438,7 +3417,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f6761bc-7bc5-4b21-89de-aaa249938c53")
-		(property "Reference" "J4"
+		(property "Reference" "J304"
 			(at 69.85 160.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3498,9 +3477,9 @@
 			(uuid "f7ca38af-7c38-448f-a4a8-153aeb172ba0")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J4")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J304")
 					(unit 1)
 				)
 			)
@@ -3518,7 +3497,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1299dfc5-4471-439a-a4a6-2cd64455c0b6")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR0306"
 			(at 41.91 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -3577,9 +3556,9 @@
 			(uuid "ef5410af-75d3-4ff5-a6dd-8cc5722b7c2e")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR03")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0306")
 					(unit 1)
 				)
 			)
@@ -3597,7 +3576,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1308a1fb-4708-4773-9f97-bb55fcd04921")
-		(property "Reference" "U1"
+		(property "Reference" "U301"
 			(at 112.6333 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3713,9 +3692,9 @@
 			(uuid "4c228c74-7e96-4b18-aaa9-23c718718ce0")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "U1")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U301")
 					(unit 1)
 				)
 			)
@@ -3733,7 +3712,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "152ad49c-1608-4d3e-83e6-7804fc278b82")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR0309"
 			(at 102.87 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -3792,9 +3771,9 @@
 			(uuid "6a80ed46-0890-44c7-8669-109593057f9e")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR06")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0309")
 					(unit 1)
 				)
 			)
@@ -3812,7 +3791,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "208d9d08-ec70-4cbb-86d4-10be1b4f2330")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR0320"
 			(at 160.02 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -3871,9 +3850,9 @@
 			(uuid "20eaa5a7-627f-4dfe-a441-4344124f9306")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR017")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0320")
 					(unit 1)
 				)
 			)
@@ -3891,7 +3870,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "26780525-92d5-49a4-ab97-42525955c13b")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR0323"
 			(at 35.56 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -3950,9 +3929,9 @@
 			(uuid "3417bc58-f66d-40c8-bced-252d3450fbd9")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR020")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0323")
 					(unit 1)
 				)
 			)
@@ -3969,7 +3948,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2cf19350-6350-4e09-85f5-e5c353bc9e73")
-		(property "Reference" "R4"
+		(property "Reference" "R304"
 			(at 144.272 129.794 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4031,9 +4010,9 @@
 			(uuid "cebae5cf-5cb6-4977-9022-d8d05c906969")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "R4")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R304")
 					(unit 1)
 				)
 			)
@@ -4051,7 +4030,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2f83de66-c488-4ffc-a16b-ce712f5857e0")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR0324"
 			(at 45.72 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -4110,9 +4089,9 @@
 			(uuid "22ce3021-30f2-4bf8-a634-ee9f7422a066")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR021")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0324")
 					(unit 1)
 				)
 			)
@@ -4129,7 +4108,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "38d79660-70ec-427b-bf4c-b8d26aaa9940")
-		(property "Reference" "C2"
+		(property "Reference" "C305"
 			(at 90.932 119.634 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4191,9 +4170,9 @@
 			(uuid "d7f9aee9-c672-49b1-9ca2-a590506d15d3")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "C2")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C305")
 					(unit 1)
 				)
 			)
@@ -4268,8 +4247,8 @@
 			(uuid "4b11ffa8-171b-4eb8-b295-8e7c6a1ec18e")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
 					(reference "#PWR0301")
 					(unit 1)
 				)
@@ -4287,7 +4266,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3e3268fc-a272-4cc5-946c-1caa8cddd080")
-		(property "Reference" "R5"
+		(property "Reference" "R302"
 			(at 143.002 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4349,9 +4328,9 @@
 			(uuid "06f265ef-e9b3-4e6e-a402-67973446bc8d")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "R5")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R302")
 					(unit 1)
 				)
 			)
@@ -4369,7 +4348,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41b29a2f-1f06-4671-90bd-db0466d560f2")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR0311"
 			(at 95.25 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -4428,9 +4407,9 @@
 			(uuid "52ade636-06b8-47c4-9f1b-e932811947cf")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR08")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0311")
 					(unit 1)
 				)
 			)
@@ -4448,7 +4427,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4348ac2b-ffbd-4a24-8df0-918ec7ed6af5")
-		(property "Reference" "J8"
+		(property "Reference" "J309"
 			(at 24.765 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4514,9 +4493,9 @@
 			(uuid "29d01b54-51be-4f41-874d-539e4b4ea29d")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J8")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J309")
 					(unit 1)
 				)
 			)
@@ -4533,7 +4512,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5897fce9-4644-462b-a592-47139b6d98f0")
-		(property "Reference" "R2"
+		(property "Reference" "R305"
 			(at 90.932 129.794 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4595,9 +4574,9 @@
 			(uuid "f097040d-9e6e-465f-8457-8bb9de9b77c2")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "R2")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R305")
 					(unit 1)
 				)
 			)
@@ -4615,7 +4594,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5e880227-897a-4d64-845c-1b6197afb714")
-		(property "Reference" "C1"
+		(property "Reference" "C301"
 			(at 101.6 60.9599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4677,9 +4656,9 @@
 			(uuid "e52a808c-80a1-4125-b63f-2e477fdf96d5")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "C1")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C301")
 					(unit 1)
 				)
 			)
@@ -4696,7 +4675,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "78162fb6-dcbf-4619-847c-d65ddaf5110e")
-		(property "Reference" "C3"
+		(property "Reference" "C303"
 			(at 93.472 147.574 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4758,9 +4737,9 @@
 			(uuid "9f3aa77a-0ed2-4a77-a9b3-513e4b30da93")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "C3")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C303")
 					(unit 1)
 				)
 			)
@@ -4778,7 +4757,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "849f6c56-6905-4423-9e8c-770457f64b1c")
-		(property "Reference" "J2"
+		(property "Reference" "J308"
 			(at 25.4 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4844,9 +4823,9 @@
 			(uuid "4b9f3bc3-ec1e-449f-85dd-82a0cb34158a")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J2")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J308")
 					(unit 1)
 				)
 			)
@@ -4864,7 +4843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88e6beb3-f899-46ea-bca8-0ea2eb65805c")
-		(property "Reference" "J1"
+		(property "Reference" "J307"
 			(at 25.4 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4930,9 +4909,9 @@
 			(uuid "53cc7ba6-2e36-4a10-b00f-c673836214fd")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J1")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J307")
 					(unit 1)
 				)
 			)
@@ -4950,7 +4929,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8951f02b-b22d-4088-9ae5-8eedcd4398c6")
-		(property "Reference" "J6"
+		(property "Reference" "J305"
 			(at 120.65 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4960,7 +4939,7 @@
 				)
 			)
 		)
-		(property "Value" "AZ_LIM_CCW_SW"
+		(property "Value" "AZ_LIM_CW_SW"
 			(at 120.65 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5010,9 +4989,9 @@
 			(uuid "f241c520-89d2-438e-94a1-2bc6e76a4df7")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J6")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J305")
 					(unit 1)
 				)
 			)
@@ -5029,7 +5008,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "984cf51e-c653-4abc-b427-f96c769b990f")
-		(property "Reference" "C5"
+		(property "Reference" "C302"
 			(at 143.002 147.574 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5091,9 +5070,9 @@
 			(uuid "583287b6-8977-4707-aaa4-4b78c475ad3c")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "C5")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C302")
 					(unit 1)
 				)
 			)
@@ -5111,7 +5090,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9cfe8fa0-68dc-4ee8-9228-9259daf682fc")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR0321"
 			(at 118.11 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -5170,9 +5149,9 @@
 			(uuid "4e07350a-cf09-41fd-9d70-dd1ab7542bc3")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR018")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0321")
 					(unit 1)
 				)
 			)
@@ -5190,7 +5169,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f86d1d1-d2a3-44e8-a0bd-b243fd9d2eff")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR0304"
 			(at 40.64 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -5249,9 +5228,9 @@
 			(uuid "1a58a641-95b7-4b29-8699-40e6bcd52c14")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR01")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -5326,8 +5305,8 @@
 			(uuid "357f3781-4d44-4486-ada1-0c6c844f6a6f")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
 					(reference "#PWR0303")
 					(unit 1)
 				)
@@ -5336,7 +5315,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 93.98 93.98 270)
+		(at 93.98 86.36 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5346,8 +5325,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a89959c9-ad52-42fa-ae40-24577701776b")
-		(property "Reference" "#PWR023"
-			(at 87.63 93.98 0)
+		(property "Reference" "#PWR0326"
+			(at 87.63 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5358,7 +5337,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 93.9799 90)
+			(at 90.17 86.3599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5369,7 +5348,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 93.98 0)
+			(at 93.98 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5380,7 +5359,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 93.98 0)
+			(at 93.98 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5391,7 +5370,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 93.98 0)
+			(at 93.98 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5405,9 +5384,9 @@
 			(uuid "25f8fb3b-6aac-4dfc-8de6-156bd68e8ab8")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR023")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0326")
 					(unit 1)
 				)
 			)
@@ -5425,7 +5404,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aba1e16e-052f-49f6-a7eb-2c77dc822a55")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR0316"
 			(at 90.17 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -5483,9 +5462,9 @@
 			(uuid "a28188a9-8fe0-49d3-aa2e-9ca63607cfbd")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR013")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0316")
 					(unit 1)
 				)
 			)
@@ -5503,7 +5482,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b042ac6e-7d63-4b52-8142-57500a8c0474")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR0314"
 			(at 152.4 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -5562,9 +5541,9 @@
 			(uuid "7bb59e1b-3e19-4658-a425-b27b6a32f310")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR011")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0314")
 					(unit 1)
 				)
 			)
@@ -5647,8 +5626,8 @@
 			(uuid "ccec9cfd-e87b-4462-b919-4a5f82a8d7cd")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
 					(reference "J301")
 					(unit 1)
 				)
@@ -5666,7 +5645,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c1126737-a791-4934-b429-6cef5aad5ec0")
-		(property "Reference" "R3"
+		(property "Reference" "R303"
 			(at 93.472 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5728,9 +5707,9 @@
 			(uuid "ab51ef85-8f34-4831-804a-317667312796")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "R3")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R303")
 					(unit 1)
 				)
 			)
@@ -5748,7 +5727,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4cce0f6-1b07-4adc-8429-cfe6943a56e0")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR0319"
 			(at 161.29 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -5807,9 +5786,9 @@
 			(uuid "28ed7d8a-7cb3-49d2-a756-105c08f19edb")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR016")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0319")
 					(unit 1)
 				)
 			)
@@ -5827,7 +5806,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb59acb6-e742-433e-8a69-66479a4e18d4")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR0305"
 			(at 50.8 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -5886,9 +5865,9 @@
 			(uuid "828409c9-af18-4e68-ab0b-9e65bc716361")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR02")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0305")
 					(unit 1)
 				)
 			)
@@ -5971,8 +5950,8 @@
 			(uuid "f5c00494-e3a3-4cce-aeb4-9000e19df6ca")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
 					(reference "J302")
 					(unit 1)
 				)
@@ -5991,7 +5970,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf408659-b4db-4628-91a0-9dca4aeacdaa")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR0315"
 			(at 147.32 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -6050,9 +6029,9 @@
 			(uuid "2cc4616f-fb11-4df8-9c59-0c3047b94a31")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR012")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0315")
 					(unit 1)
 				)
 			)
@@ -6070,7 +6049,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf5e72af-1895-4acf-b3bd-f26a7c1c4985")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR0318"
 			(at 107.95 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -6129,9 +6108,9 @@
 			(uuid "a508d439-6028-4342-bb87-623e71bf536c")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR015")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0318")
 					(unit 1)
 				)
 			)
@@ -6149,7 +6128,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5511b82-d922-49dc-9afb-fd7e7ff6331f")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR0325"
 			(at 87.63 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -6208,9 +6187,9 @@
 			(uuid "2693848c-2f45-4565-8cd7-071eb81093d5")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR022")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0325")
 					(unit 1)
 				)
 			)
@@ -6285,8 +6264,8 @@
 			(uuid "a6eedd32-a520-4f5a-8f18-e1cb7f623250")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
 					(reference "#PWR0302")
 					(unit 1)
 				)
@@ -6305,7 +6284,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e29a15ff-be23-4444-ba11-db35b2e0921f")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR0307"
 			(at 52.07 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -6364,9 +6343,9 @@
 			(uuid "3c194606-7d36-49d6-8716-a7adce626f7b")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR04")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0307")
 					(unit 1)
 				)
 			)
@@ -6384,7 +6363,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e719165b-a764-425f-ad29-bed3d3e5096b")
-		(property "Reference" "J5"
+		(property "Reference" "J303"
 			(at 119.38 160.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6444,9 +6423,9 @@
 			(uuid "0b81ab7b-d5e0-4484-8bb6-fddc8560e48a")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J5")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J303")
 					(unit 1)
 				)
 			)
@@ -6464,7 +6443,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8d9c2c2-d241-454d-a3ef-95554146b6d4")
-		(property "Reference" "J3"
+		(property "Reference" "J306"
 			(at 67.31 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6474,7 +6453,7 @@
 				)
 			)
 		)
-		(property "Value" "AZ_LIM_CW_SW"
+		(property "Value" "AZ_LIM_CCW_SW"
 			(at 67.31 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6524,9 +6503,9 @@
 			(uuid "bf403211-ed18-4b77-8c9b-218b91a489a0")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "J3")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J306")
 					(unit 1)
 				)
 			)
@@ -6543,7 +6522,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ea5c5e8b-f3b1-44c3-a1cd-379ef57d9bae")
-		(property "Reference" "C4"
+		(property "Reference" "C304"
 			(at 144.272 119.634 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6605,9 +6584,9 @@
 			(uuid "760f9566-ddf5-4cb6-a9b4-41f4e35e7239")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "C4")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C304")
 					(unit 1)
 				)
 			)
@@ -6625,7 +6604,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eeedaf46-ebe9-4d50-83b2-8128ac891b9a")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR0312"
 			(at 153.67 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -6684,9 +6663,9 @@
 			(uuid "7f5e883b-3793-40c7-b1f0-98d944fb914d")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR09")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0312")
 					(unit 1)
 				)
 			)
@@ -6704,7 +6683,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe17c4ca-f6e3-485e-b7d3-0ddacbd6f3a3")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR0317"
 			(at 110.49 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -6763,9 +6742,9 @@
 			(uuid "dac84f03-6e20-4ed7-8d34-6a11dc0f0e53")
 		)
 		(instances
-			(project "hat_signals(rev1)"
-				(path "/65a6f830-f399-5d40-9188-3b250a6dce5b"
-					(reference "#PWR014")
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0317")
 					(unit 1)
 				)
 			)
