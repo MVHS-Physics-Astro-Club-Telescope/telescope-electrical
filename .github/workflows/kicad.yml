@@ -149,7 +149,8 @@ jobs:
         run: |
           marker='<!-- schematic-diff -->'
           existing=$(gh api "repos/$GH_REPO/issues/$PR/comments" --paginate \
-            --jq ".[] | select(.body | startswith(\"$marker\")) | .id" | head -n 1)
+            --jq ".[] | select(.body | startswith(\"$marker\")) | .id")
+          existing=${existing%%$'\n'*}   # first match only (no pipe into head: pipefail + SIGPIPE)
           if [ ! -s out/comment.md ]; then
             printf '%s\nNo schematic changes compared with `main`.\n' "$marker" > out/comment.md
             if [ -n "$existing" ]; then
