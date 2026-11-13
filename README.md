@@ -40,6 +40,9 @@ All of these live in `mv-telescope-hat/`. The pin map, with every pin and the re
    this repo.
 2. Make a branch: Branch > New branch, named like `ibrahim/buffer`.
 3. In KiCad, open `mv-telescope-hat/mv-telescope-hat.kicad_pro`, double-click your block, draw, and save.
+   **Always go through the `.kicad_pro`.** If you open your `.kicad_sch` file on its own, KiCad treats that one sheet as
+   a whole separate project: every hierarchical label errors with "cannot be connected to non-existent parent sheet",
+   and Annotate numbers your parts from 1, so your J1 collides with the Pi header's J1. The check below fails both.
 4. Run Inspect > Electrical Rules Checker and get to 0 errors. Warnings are fine while the sheet is unfinished.
 5. In GitHub Desktop, look at the changed-files list. If anything besides your sheet changed and you didn't mean it
    to (KiCad sometimes rewrites the project file or a sheet you only looked at), right-click it > Discard changes.
@@ -57,9 +60,12 @@ container:
 
 - **Any ERC error fails the check.** If a sheet file won't load, its labels go missing and the root page shows
   "Sheet pin has no matching hierarchical label" errors, so a broken file fails too.
-- **Warnings don't fail it.** Right now there are 92, all placeholders: "Label connected to only one pin" (a signal
-  whose other end isn't drawn yet) and "Unconnected wire endpoint" (the short wires on the labels waiting for parts).
-  They clear as the HAT and power sheets get drawn.
+- **Warnings don't fail it.** They're placeholders: "Label connected to only one pin" (a signal whose other end isn't
+  drawn yet) and "Unconnected wire endpoint" (the short wires on the labels waiting for parts). They clear as the
+  sheets get drawn.
+- **Every reference must be unique, and every sheet must be saved by this project.** kicad-cli's ERC skips KiCad's
+  annotation check, so a second step exports the netlist and fails on a reference used twice (two J1s) or on a sheet
+  whose parts were saved by some other project (the sign it was opened on its own).
 - Every run uploads the PDF of every sheet and the full ERC report as the `schematic` artifact.
 
 Questions go in #electrical on Slack.
