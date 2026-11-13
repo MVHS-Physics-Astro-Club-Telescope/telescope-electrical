@@ -60,7 +60,7 @@ but you can't see a drawing that way. There are three better ways to look:
 
 1. **The picture comment.** On every pull request, CI posts one comment with a picture of each sheet that changed.
    Red is only in the old version, blue is only in the new one, black is unchanged, and yellow marks every spot that
-   changed. Click a picture to open it full size, or use the `before` and `after` links to see each version in colour.
+   changed. Click a picture to download it full size, or use the `before` and `after` links to download each version in colour.
    The comment updates itself after every new commit.
 2. **The PDF.** The `erc` check's Details > Summary > `schematic` has the pull request's PDF of every sheet.
 3. **In KiCad on your computer.** In GitHub Desktop, click Current branch > Pull requests and pick the pull request
