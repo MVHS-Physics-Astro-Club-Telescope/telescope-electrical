@@ -32,6 +32,32 @@ jobs:
             -o erc-errors.rpt mv-telescope-hat/mv-telescope-hat.kicad_sch \
             || { cat erc-errors.rpt; exit 1; }
 
+      - name: One project, unique references
+        # kicad-cli's ERC skips KiCad's annotation check, so two parts both called J1 still pass ERC (PR #4 did).
+        # This catches it, plus the usual cause: a sheet edited as its own project instead of through the .kicad_pro.
+        if: always()
+        run: |
+          fail=0
+          wrong=$(grep -n '(project "' mv-telescope-hat/*.kicad_sch | grep -v '(project "mv-telescope-hat"' \
+            | sed -E 's/:[0-9]+:.*project "([^"]+)".*/ (saved by project "\1")/' | sort -u)
+          if [ -n "$wrong" ]; then
+            echo "::error::A sheet was edited outside the project: $wrong. Open mv-telescope-hat/mv-telescope-hat.kicad_pro and double-click your block; never open your .kicad_sch file on its own."
+            fail=1
+          fi
+          kicad-cli sch export netlist --format kicadsexpr -o netlist.net mv-telescope-hat/mv-telescope-hat.kicad_sch > netlist.log 2>&1
+          cat netlist.log
+          dups=$(grep -A1 -E '^[[:space:]]*\(comp$' netlist.net | grep -oE '\(ref "[^"]+"' \
+            | sed -E 's/.*"([^"]+)"/\1/' | sort | uniq -d | tr '\n' ' ')
+          if [ -n "$dups" ]; then
+            echo "::error::These references are used by more than one part: $dups. Annotate your sheet in its hundreds (README rule 4)."
+            fail=1
+          fi
+          if grep -q "annotation errors" netlist.log; then
+            echo "::error::KiCad reports annotation errors (a part without a number, or a number used twice)."
+            fail=1
+          fi
+          exit $fail
+
       - name: Full ERC report (errors and warnings, to read)
         if: always()
         run: |
