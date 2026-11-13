@@ -53,6 +53,20 @@ All of these live in `mv-telescope-hat/`. The pin map, with every pin and the re
 `main` is protected. Every change goes through a pull request, the `erc` check must pass, and a code owner must
 approve (see `.github/CODEOWNERS`).
 
+## Seeing what a pull request changed
+
+KiCad files are text, so a pull request's **Files changed** tab shows them like code. That's fine for a renamed part,
+but you can't see a drawing that way. There are three better ways to look:
+
+1. **The picture comment.** On every pull request, CI posts one comment with a picture of each sheet that changed.
+   Red is only in the old version, blue is only in the new one, black is unchanged, and yellow marks every spot that
+   changed. Click a picture to open it full size, or use the `before` and `after` links to see each version in colour.
+   The comment updates itself after every new commit.
+2. **The PDF.** The `erc` check's Details > Summary > `schematic` has the pull request's PDF of every sheet.
+3. **In KiCad on your computer.** In GitHub Desktop, click Current branch > Pull requests and pick the pull request
+   (or in a terminal, run `gh pr checkout <number>`). Then open `mv-telescope-hat/mv-telescope-hat.kicad_pro` as usual.
+   Switch back to your own branch before you edit anything.
+
 ## The check
 
 `.github/workflows/kicad.yml` runs KiCad 10's own ERC on the whole hierarchy in the official `kicad/kicad:10.0`
@@ -67,5 +81,8 @@ container:
   annotation check, so a second step exports the netlist and fails on a reference used twice (two J1s) or on a sheet
   whose parts were saved by some other project (the sign it was opened on its own).
 - Every run uploads the PDF of every sheet and the full ERC report as the `schematic` artifact.
+- On pull requests, two more jobs (`draw`, then `schematic-diff`) make the picture comment described above. They never
+  block a merge. The pictures are stored on the `pr-previews` pre-release, and each pull request keeps only its
+  newest set. A pull request from a fork gets no comment, because GitHub doesn't let CI write to it; use the PDF.
 
 Questions go in #electrical on Slack.

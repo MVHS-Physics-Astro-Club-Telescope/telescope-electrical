@@ -77,6 +77,102 @@ jobs:
             erc-full.rpt
             erc-errors.rpt
 
+  draw:
+    # Every sheet drawn before (main) and after (this pull request), for the picture comment made by schematic-diff.
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    steps:
+      - name: Check out this pull request (as GitHub would merge it)
+        uses: actions/checkout@v7
+        with:
+          path: after
+
+      - name: Check out main as the pull request sees it
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: before
+
+      - name: Draw every sheet, in colour and in black and white
+        run: |
+          for side in before after; do
+            sch="$side/mv-telescope-hat/mv-telescope-hat.kicad_sch"
+            [ -f "$sch" ] || continue
+            kicad-cli sch export svg -o "svg/$side/color" "$sch"
+            kicad-cli sch export svg --black-and-white -o "svg/$side/bw" "$sch"
+          done
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: schematic-svg
+          path: svg
+
+  schematic-diff:
+    # Turns those drawings into before/after pictures and posts them as one comment on the pull request.
+    # It never blocks a merge (not a required check). Forks get no comment: their token can't write here.
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    needs: draw
+    runs-on: ubuntu-latest
+    concurrency:
+      group: schematic-diff-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
+    permissions:
+      contents: write        # upload the pictures to the pr-previews release
+      issues: write          # post or edit the comment
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      PR: ${{ github.event.pull_request.number }}
+      SHA: ${{ github.event.pull_request.head.sha }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: schematic-svg
+          path: svg
+
+      - name: Install the picture tools
+        run: sudo apt-get update -q && sudo apt-get install -y -q librsvg2-bin python3-pil python3-numpy
+
+      - name: Make the pictures
+        run: |
+          python3 .github/scripts/schematic_diff.py svg out --prefix "pr${PR}-${SHA::7}" --commit "$SHA" \
+            --url-base "https://github.com/${GH_REPO}/releases/download/pr-previews"
+          ls -la out
+
+      - name: Upload the pictures and post or update the comment
+        run: |
+          marker='<!-- schematic-diff -->'
+          existing=$(gh api "repos/$GH_REPO/issues/$PR/comments" --paginate \
+            --jq ".[] | select(.body | startswith(\"$marker\")) | .id" | head -n 1)
+          if [ ! -s out/comment.md ]; then
+            printf '%s\nNo schematic changes compared with `main`.\n' "$marker" > out/comment.md
+            if [ -n "$existing" ]; then
+              gh api -X PATCH "repos/$GH_REPO/issues/comments/$existing" -F body=@out/comment.md > /dev/null
+            fi
+            echo "No sheet changed."
+            exit 0
+          fi
+          if ! gh release view pr-previews > /dev/null 2>&1; then
+            gh release create pr-previews --prerelease --title "Pull request schematic pictures" \
+              --notes "Pictures for the schematic-diff comment on each pull request. CI keeps only each pull request's newest set."
+          fi
+          # Drop this pull request's pictures from older commits (jq filters, so an empty list isn't an error).
+          gh release view pr-previews --json assets \
+            --jq ".assets[].name | select(startswith(\"pr${PR}-\") and (startswith(\"pr${PR}-${SHA::7}-\") | not))" \
+            | while read -r old; do gh release delete-asset pr-previews "$old" --yes; done
+          gh release upload pr-previews out/*.png --clobber
+          if [ -n "$existing" ]; then
+            gh api -X PATCH "repos/$GH_REPO/issues/comments/$existing" -F body=@out/comment.md > /dev/null
+          else
+            gh pr comment "$PR" --body-file out/comment.md
+          fi
+
   publish:
     # After a merge to main, put the PDF on the "latest-schematic" release so there is one link that is always current.
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
