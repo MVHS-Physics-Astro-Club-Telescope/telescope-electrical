@@ -114,7 +114,7 @@ def main() -> None:
         lines = [MARKER, "### Schematic changes in this pull request", "",
                  "Compared with `main`. **Red** is only in the old version (removed), **blue** is only in the new "
                  "version (added), **black** is unchanged, and **yellow** marks every spot that changed. "
-                 "Click a picture to open it full size.", ""]
+                 "Click a picture or link to download it full size.", ""]
         for name, files, _ in changed:
             lines.append(f"#### {name}")
             shown = files.get("zoom", files["changes"])
