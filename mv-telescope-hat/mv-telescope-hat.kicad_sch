@@ -13,7 +13,7 @@
 		(comment 2 "The wires on this page are the agreed connections between sheets.")
 	)
 	(lib_symbols)
-	(text "Pi → HAT: the 17 Pi signals from the pin map.     HAT → power: the 6 buffered lines that run by cable to the two DM542T drivers.\nPi → power: I2C_SDA and I2C_SCL to the INA260 current sensor (through J201 on the HAT).\n+5V, +3V3 and GND are power symbols: they join across every sheet on their own, so they need no wire here."
+	(text "+5V, +3V3 and GND join across sheets on their own: no wire needed here."
 		(exclude_from_sim no)
 		(at 25.4 30.48 0)
 		(effects
@@ -24,7 +24,7 @@
 		)
 		(uuid "1974ace9-3f9a-5b59-a3ff-b85cb3d5ea9e")
 	)
-	(text "WHO OWNS WHAT (one file each, so nobody edits the same file)\n  •  Pi header  ·  pi_header.kicad_sch  ·  Eeshan  ·  done: J1 + the pin map\n  •  HAT signals  ·  hat_signals.kicad_sch  ·  Ibrahim  ·  74ACT244 buffer, driver / limit / encoder connectors, pull-ups, caps\n  •  Power and drivers  ·  power.kicad_sch  ·  Eeshan for now, open to a new member  ·  battery to DM542Ts (off the PCB)\n  •  This page and the project files (.kicad_pro, .kicad_pcb)  ·  Eeshan\n\nRULES\n  1. Only edit your own sheet file. Open the project, then double-click your block on this page.\n  2. The pins and wires on this page are the contract. Need a new signal between sheets? Ask Eeshan: he adds it here and in both sheets.\n  3. Annotate only your sheet: Tools > Annotate Schematic, scope 'Current sheet only', numbering 'First free after sheet number × 100'.\n      So HAT signals parts become U301, R301, J301...  and power parts F401, SW401...  No two sheets can pick the same reference.\n  4. Power and drivers is set to 'Exclude from board': nothing on it goes on the HAT PCB.\n  5. Every change goes through a GitHub pull request. The ERC check runs on its own and must pass before it merges."
+	(text "OWNERS: Pi header and Power and drivers: Eeshan. HAT signals: Ibrahim.\nEdit only your own sheet. Annotate 'Current sheet only', 'First free after sheet number × 100'.\nEvery change goes through a pull request, and ERC must pass."
 		(exclude_from_sim no)
 		(at 25.4 112 0)
 		(effects
@@ -35,27 +35,57 @@
 		)
 		(uuid "57f34cfe-b92c-5ea9-9866-85eca1d8bcd4")
 	)
-	(text "HOW THE SHEETS CONNECT"
-		(exclude_from_sim no)
-		(at 25.4 25.4 0)
-		(effects
-			(font
-				(size 2 2)
-				(bold yes)
-			)
-			(justify left top)
-		)
-		(uuid "8ca6ae66-858b-5529-967a-11b7bbda2f50")
-	)
 	(wire
 		(pts
-			(xy 71.12 109.22) (xy 187.96 109.22)
+			(xy 134.62 99.06) (xy 134.62 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "045a4e5d-23e0-50cc-983f-3754e4d86c81")
+		(uuid "65a85e7d-05d6-48d1-b612-8ca9d2ba1d6f")
+	)
+	(wire
+		(pts
+			(xy 139.7 99.06) (xy 139.7 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97f4d1e1-37a6-4e43-bd60-c2b266aeb752")
+	)
+	(junction
+		(at 134.62 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a063454f-28d2-4fa9-b4ab-c45c0249ed1d")
+	)
+	(junction
+		(at 139.7 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12af5794-fb8f-447b-81b3-3e7b8e3fe7db")
+	)
+	(wire
+		(pts
+			(xy 71.12 109.22) (xy 139.7 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "749da9ce-d4d6-419a-a612-1621f3801508")
+	)
+	(wire
+		(pts
+			(xy 139.7 109.22) (xy 187.96 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d863748d-d610-45fd-96b2-f758a60e40c4")
 	)
 	(wire
 		(pts
@@ -129,13 +159,23 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 106.68) (xy 182.88 106.68)
+			(xy 76.2 106.68) (xy 134.62 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "27aeba68-a71b-5281-8265-04b3a03fed20")
+		(uuid "c353cc89-a9fa-40f4-8bf1-eccf3834ac18")
+	)
+	(wire
+		(pts
+			(xy 134.62 106.68) (xy 182.88 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76d8d74e-9e4f-4119-84aa-d8b7d1acc161")
 	)
 	(wire
 		(pts
@@ -1288,6 +1328,26 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "I2C_SDA" bidirectional
+			(at 134.62 99.06 270)
+			(uuid "bfd36b63-f349-4681-8c70-db0f52e058f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SCL" input
+			(at 139.7 99.06 270)
+			(uuid "5682748a-bb58-4303-983c-d7b3d2a0b8cb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances

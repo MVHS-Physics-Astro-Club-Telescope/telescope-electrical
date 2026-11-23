@@ -705,7 +705,7 @@
         "uuid": "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
       }
     ],
-    "used_designators": "#FLG4,#PWR5-7",
+    "used_designators": "#FLG4,#PWR5-7,#PWR201-202,J201",
     "variants": []
   },
   "sheets": [

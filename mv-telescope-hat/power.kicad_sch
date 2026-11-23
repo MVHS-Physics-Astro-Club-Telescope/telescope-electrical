@@ -745,103 +745,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MV:Env_Sensor"
-			(pin_numbers
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "A"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Env_Sensor"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Temperature/humidity probe with an RJ12 plug"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Env_Sensor_0_1"
-				(rectangle
-					(start -7.62 2.54)
-					(end 7.62 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "Env_Sensor_1_1"
-				(pin passive line
-					(at -10.16 0 0)
-					(length 2.54)
-					(name "RJ12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "MV:DM542T"
 			(pin_numbers
 				(hide yes)
@@ -1278,6 +1181,103 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MV:Env_Sensor"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "A"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Env_Sensor"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Temperature/humidity probe with an RJ12 plug"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Env_Sensor_0_1"
+				(rectangle
+					(start -7.62 2.54)
+					(end 7.62 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Env_Sensor_1_1"
+				(pin passive line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "RJ12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3808,8 +3808,36 @@
 		(uuid "0b805d0b-a004-53cd-838a-9189bbbf51ca")
 	)
 	(no_connect
+		(at 198.12 114.3)
+		(uuid "1d9d4650-8b0c-408b-bde0-dd1f45bf1efe")
+	)
+	(no_connect
+		(at 198.12 88.9)
+		(uuid "3721b292-bc68-4e38-a7f9-3a0fb73f103b")
+	)
+	(no_connect
+		(at 198.12 109.22)
+		(uuid "427dc645-8900-480d-93c3-2f0fdac9323d")
+	)
+	(no_connect
+		(at 198.12 91.44)
+		(uuid "49155d0b-c2df-48a7-b9e2-99c3f68225ac")
+	)
+	(no_connect
+		(at 198.12 121.92)
+		(uuid "51d8243d-127d-48da-b981-8ffea8fe3af3")
+	)
+	(no_connect
+		(at 198.12 124.46)
+		(uuid "5683bf37-d098-42f1-b4fd-a6c286e41b27")
+	)
+	(no_connect
 		(at 241.3 204.47)
 		(uuid "57e78f87-0e96-54a0-9a0f-c830918b0c83")
+	)
+	(no_connect
+		(at 198.12 106.68)
+		(uuid "6460ef86-2314-48a0-bef0-9d9ee5da19e9")
 	)
 	(no_connect
 		(at 78.74 60.96)
@@ -3828,138 +3856,20 @@
 		(uuid "928ea836-4ae4-5982-862a-4eb15c0d9d51")
 	)
 	(no_connect
-		(at 241.3 148.59)
-		(uuid "b650c87b-0798-5933-b314-2e3ce8a9bbfa")
-	)
-	(wire
-		(pts
-			(xy 198.12 96.52) (xy 205.74 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "418ce62b-0ec1-4782-af33-03bf48dab42c")
-	)
-	(label "USB3_CAM"
-		(at 205.74 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2e1f114e-b6ce-47aa-afeb-16a07e1a3850")
-	)
-	(wire
-		(pts
-			(xy 198.12 99.06) (xy 205.74 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b698fb58-ec2f-4535-8897-100018495d04")
-	)
-	(label "USB3_PI"
-		(at 205.74 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "909df631-dc0e-43b6-a496-58c2d5bb4e70")
-	)
-	(wire
-		(pts
-			(xy 198.12 101.6) (xy 223.52 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9134132a-1c9a-47cb-95cd-864293e338fa")
-	)
-	(wire
-		(pts
-			(xy 218.44 33.02) (xy 213.36 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "666c029a-47fd-4e12-9d25-60087346bdf6")
-	)
-	(label "USB3_PI"
-		(at 213.36 33.02 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "71a237cf-8407-4b4d-9bc7-837444a8ef79")
-	)
-	(wire
-		(pts
-			(xy 223.52 48.26) (xy 218.44 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3937446a-30f0-47c1-b5d4-84351487c508")
-	)
-	(label "USB3_CAM"
-		(at 218.44 48.26 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e807d2cf-9bc6-4a74-9374-ac607aa09992")
-	)
-	(no_connect
-		(at 198.12 88.9)
-		(uuid "3721b292-bc68-4e38-a7f9-3a0fb73f103b")
-	)
-	(no_connect
-		(at 198.12 91.44)
-		(uuid "49155d0b-c2df-48a7-b9e2-99c3f68225ac")
-	)
-	(no_connect
-		(at 198.12 106.68)
-		(uuid "6460ef86-2314-48a0-bef0-9d9ee5da19e9")
-	)
-	(no_connect
-		(at 198.12 109.22)
-		(uuid "427dc645-8900-480d-93c3-2f0fdac9323d")
-	)
-	(no_connect
-		(at 198.12 111.76)
-		(uuid "cdb49514-b1a3-4e8d-8db5-e27cc41e6b37")
-	)
-	(no_connect
-		(at 198.12 114.3)
-		(uuid "1d9d4650-8b0c-408b-bde0-dd1f45bf1efe")
-	)
-	(no_connect
 		(at 198.12 116.84)
 		(uuid "9bc715c8-ede4-4a90-8827-ac1d81280f45")
+	)
+	(no_connect
+		(at 241.3 148.59)
+		(uuid "b650c87b-0798-5933-b314-2e3ce8a9bbfa")
 	)
 	(no_connect
 		(at 198.12 119.38)
 		(uuid "cb849248-655b-4545-8396-ae554afd2b45")
 	)
 	(no_connect
-		(at 198.12 121.92)
-		(uuid "51d8243d-127d-48da-b981-8ffea8fe3af3")
-	)
-	(no_connect
-		(at 198.12 124.46)
-		(uuid "5683bf37-d098-42f1-b4fd-a6c286e41b27")
+		(at 198.12 111.76)
+		(uuid "cdb49514-b1a3-4e8d-8db5-e27cc41e6b37")
 	)
 	(wire
 		(pts
@@ -4143,6 +4053,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 48.26) (xy 218.44 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3937446a-30f0-47c1-b5d4-84351487c508")
+	)
+	(wire
+		(pts
 			(xy 266.7 125.73) (xy 292.1 125.73)
 		)
 		(stroke
@@ -4150,6 +4070,16 @@
 			(type default)
 		)
 		(uuid "410e3ef3-5e8f-50c6-87e3-d4e4b3370bc2")
+	)
+	(wire
+		(pts
+			(xy 198.12 96.52) (xy 205.74 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "418ce62b-0ec1-4782-af33-03bf48dab42c")
 	)
 	(wire
 		(pts
@@ -4310,6 +4240,16 @@
 			(type default)
 		)
 		(uuid "621ed543-326d-5b85-95d2-440dcab95d38")
+	)
+	(wire
+		(pts
+			(xy 218.44 33.02) (xy 213.36 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "666c029a-47fd-4e12-9d25-60087346bdf6")
 	)
 	(wire
 		(pts
@@ -4503,6 +4443,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 101.6) (xy 223.52 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9134132a-1c9a-47cb-95cd-864293e338fa")
+	)
+	(wire
+		(pts
 			(xy 241.3 194.31) (xy 228.6 194.31)
 		)
 		(stroke
@@ -4580,6 +4530,16 @@
 			(type default)
 		)
 		(uuid "b4c687d6-691e-5553-8b8c-c3856b6a7029")
+	)
+	(wire
+		(pts
+			(xy 198.12 99.06) (xy 205.74 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b698fb58-ec2f-4535-8897-100018495d04")
 	)
 	(wire
 		(pts
@@ -4851,6 +4811,16 @@
 		)
 		(uuid "234a934a-fb71-55bd-bea3-3a2795326c4e")
 	)
+	(label "USB3_CAM"
+		(at 205.74 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2e1f114e-b6ce-47aa-afeb-16a07e1a3850")
+	)
 	(label "+24V"
 		(at 218.44 110.49 180)
 		(effects
@@ -4870,6 +4840,26 @@
 			(justify left bottom)
 		)
 		(uuid "5fdbe3c4-503a-5359-a7fe-4e033a67306f")
+	)
+	(label "USB3_PI"
+		(at 213.36 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "71a237cf-8407-4b4d-9bc7-837444a8ef79")
+	)
+	(label "USB3_PI"
+		(at 205.74 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "909df631-dc0e-43b6-a496-58c2d5bb4e70")
 	)
 	(label "24V_RTN"
 		(at 198.12 139.7 0)
@@ -4920,6 +4910,16 @@
 			(justify left bottom)
 		)
 		(uuid "e30ccb1f-7f5b-52b1-8d7b-7a49e16195e6")
+	)
+	(label "USB3_CAM"
+		(at 218.44 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e807d2cf-9bc6-4a74-9374-ac607aa09992")
 	)
 	(hierarchical_label "I2C_SDA"
 		(shape bidirectional)
@@ -7551,84 +7551,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MV:Env_Sensor")
-		(at 233.68 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "d7d19c6d-c932-43de-88e8-e56ea7e382b7")
-		(property "Reference" "A410"
-			(at 243.84 100.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PPBA temp/humidity sensor"
-			(at 243.84 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 233.68 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://pegasusastro.com/wp-content/uploads/2024/12/PPBADV_manual_v1.5.pdf"
-			(at 233.68 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Temperature/humidity probe that comes in the PPBA box. 50 cm RJ12 cable into EXT. The PPBA reads the dew point from it to run auto-dew (manual 4.5, 4.8)"
-			(at 233.68 101.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cd75f57f-6d36-403e-875f-3d362d193a58")
-		)
-		(instances
-			(project "mv-telescope-hat"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
-					(reference "A410")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 50.8 83.82 0)
 		(unit 1)
@@ -7701,6 +7623,84 @@
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
 					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MV:Env_Sensor")
+		(at 233.68 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "d7d19c6d-c932-43de-88e8-e56ea7e382b7")
+		(property "Reference" "A410"
+			(at 243.84 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PPBA temp/humidity sensor"
+			(at 243.84 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://pegasusastro.com/wp-content/uploads/2024/12/PPBADV_manual_v1.5.pdf"
+			(at 233.68 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Temperature/humidity probe that comes in the PPBA box. 50 cm RJ12 cable into EXT. The PPBA reads the dew point from it to run auto-dew (manual 4.5, 4.8)"
+			(at 233.68 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cd75f57f-6d36-403e-875f-3d362d193a58")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "A410")
 					(unit 1)
 				)
 			)
