@@ -1464,6 +1464,145 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+3.3V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power global)
 			(pin_numbers
@@ -1858,7 +1997,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "HAT SIGNALS  (owner: Ibrahim). This file is yours. Draw between the labels: left = from the Pi, right = out to the drivers.\nDon't rename or delete a label. They match the pins on the root page. Ask Eeshan if you need a new one.\n\nWHAT GOES ON THIS SHEET (full pin numbers: the notes on the Pi header sheet and README.md)\n  1. Buffer U301 (74ACT244). Wire it by PIN NUMBER from the table in README.md, not by pin name: KiCad's symbol\n      names the channels 1A0-1A3 / 2A0-2A3 and runs the 2-side in the opposite order from TI's datasheet.\n      In -> out: ALT PUL 2->18, DIR 4->16, ENA 6->14.  AZ PUL 11->9, DIR 13->7, ENA 15->5.  Spare inputs 8 and 17 to GND.\n      1OE (1) + 2OE (19) = BUF_OE_N with a 10k pull-up to +3V3.  VCC (20) = +5V with a 100 nF cap to GND (10).\n  2. J301 / J302 (ALT / AZ driver terminals: 5V / PUL- / DIR- / ENA-) are placed already, because they anchor the cable\n      to the power sheet. U301 reaches them through the *_DRV_* labels.\n  3. Limit switches: a connector per switch, 10k pull-up to +3V3 and 100 nF to GND on each line. Switch NC contact goes to GND.\n  4. Encoders: connector spots only (nothing bought yet). The Pi takes 3.3V max.\n  5. Give every part a footprint. Inspect > Electrical Rules Checker: 0 errors before you open a pull request."
+	(text "HAT SIGNALS (owner: Ibrahim)\nU301: wired by pin number. KiCad's pin names don't match TI's datasheet.\nLimit switches: NC contact to GND, 10k pull-up to +3V3, 100 nF to GND.\nEncoders: 3.3 V max into the Pi."
 		(exclude_from_sim no)
 		(at 25.4 22.86 0)
 		(effects
@@ -1868,6 +2007,17 @@
 			(justify left top)
 		)
 		(uuid "27755842-afe9-59c6-a800-ef281865158d")
+	)
+	(text "J310: cable to the INA260 current sensor (A401, power sheet)."
+		(exclude_from_sim no)
+		(at 209.55 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6da3ab14-2183-4326-b0e6-4068fb694646")
 	)
 	(junction
 		(at 142.24 134.62)
@@ -1975,6 +2125,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 59.69) (xy 166.37 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03d2cdb9-e18c-47fa-b2b3-4d86dd00813e")
+	)
+	(wire
+		(pts
 			(xy 90.17 96.52) (xy 97.79 96.52)
 		)
 		(stroke
@@ -2015,6 +2175,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 57.15) (xy 166.37 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b00ba73-8b23-43ef-ab3c-1e6534e7d41b")
+	)
+	(wire
+		(pts
 			(xy 91.44 162.56) (xy 91.44 166.37)
 		)
 		(stroke
@@ -2032,6 +2202,16 @@
 			(type default)
 		)
 		(uuid "0c93664a-584a-436c-b50f-06e393aca564")
+	)
+	(wire
+		(pts
+			(xy 181.61 54.61) (xy 176.53 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d8eb98e-5be4-4732-ac14-7b97b188db12")
 	)
 	(wire
 		(pts
@@ -2112,6 +2292,16 @@
 			(type default)
 		)
 		(uuid "2b6767b2-e518-44e9-a326-9954c126c4ca")
+	)
+	(wire
+		(pts
+			(xy 176.53 54.61) (xy 176.53 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cbce1d7-b1ea-454c-bbb9-fa4ae28e34ea")
 	)
 	(wire
 		(pts
@@ -2212,6 +2402,16 @@
 			(type default)
 		)
 		(uuid "48c04ad1-4091-44af-9912-295637cb077a")
+	)
+	(wire
+		(pts
+			(xy 176.53 62.23) (xy 176.53 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49a29456-997c-4030-929b-aac9cd0ec995")
 	)
 	(wire
 		(pts
@@ -2593,7 +2793,6 @@
 		)
 		(uuid "e7e854db-c312-4b52-b9f0-4b43c9e5eb84")
 	)
-
 	(wire
 		(pts
 			(xy 72.39 140.97) (xy 93.98 140.97)
@@ -2666,6 +2865,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 62.23) (xy 176.53 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdcdfdcf-1497-40d7-969e-9b33d90baef7")
+	)
+	(wire
+		(pts
 			(xy 185.42 78.74) (xy 190.5 78.74)
 		)
 		(stroke
@@ -2693,6 +2902,66 @@
 			(type default)
 		)
 		(uuid "ffee37a0-9c30-4b72-aacc-6bf5ccf4826d")
+	)
+	(label "ALT_DRV_ENA"
+		(at 128.27 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fb1d1e0-6c32-4e76-9c9b-29355b2ee138")
+	)
+	(label "ALT_DRV_PUL"
+		(at 128.27 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51227aa9-9c14-4556-836b-f070557dcc5c")
+	)
+	(label "AZ_DRV_PUL"
+		(at 128.27 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53dfa504-2d09-4844-9852-64f394918c37")
+	)
+	(label "ALT_DRV_DIR"
+		(at 128.27 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b04e5dd-fede-4431-92a2-65bb772dd6bb")
+	)
+	(label "AZ_DRV_ENA"
+		(at 128.27 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b5427dd-406f-4184-abdf-50a9b63ad1e5")
+	)
+	(label "AZ_DRV_DIR"
+		(at 128.27 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0133130-6aa4-4d7e-a1f0-b338d92fe159")
 	)
 	(hierarchical_label "ALT_ENA"
 		(shape input)
@@ -2726,16 +2995,6 @@
 			(justify right)
 		)
 		(uuid "169d1215-eeff-4d40-a609-a4cf2c964aba")
-	)
-	(label "ALT_DRV_ENA"
-		(at 128.27 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1fb1d1e0-6c32-4e76-9c9b-29355b2ee138")
 	)
 	(hierarchical_label "ALT_DIR"
 		(shape input)
@@ -2792,26 +3051,6 @@
 		)
 		(uuid "46743f9c-4c65-5616-bb6c-aa05fc5d6648")
 	)
-	(label "ALT_DRV_PUL"
-		(at 128.27 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "51227aa9-9c14-4556-836b-f070557dcc5c")
-	)
-	(label "AZ_DRV_PUL"
-		(at 128.27 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "53dfa504-2d09-4844-9852-64f394918c37")
-	)
 	(hierarchical_label "ALT_LIM_HIGH"
 		(shape output)
 		(at 96.52 166.37 0)
@@ -2822,16 +3061,6 @@
 			(justify left)
 		)
 		(uuid "56786678-f09a-5c51-bba2-09e361033916")
-	)
-	(label "ALT_DRV_DIR"
-		(at 128.27 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5b04e5dd-fede-4431-92a2-65bb772dd6bb")
 	)
 	(hierarchical_label "BUF_OE_N"
 		(shape input)
@@ -2855,6 +3084,17 @@
 		)
 		(uuid "67366663-8844-5f6e-bcef-3d1db9c22c64")
 	)
+	(hierarchical_label "I2C_SCL"
+		(shape input)
+		(at 166.37 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6989ffbc-0d18-4d7f-8d65-4c7b00361eaf")
+	)
 	(hierarchical_label "AZ_ENC_B"
 		(shape output)
 		(at 45.72 157.48 0)
@@ -2876,16 +3116,6 @@
 			(justify right)
 		)
 		(uuid "7286d977-b26c-4392-8ec9-cb0203986069")
-	)
-	(label "AZ_DRV_ENA"
-		(at 128.27 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7b5427dd-406f-4184-abdf-50a9b63ad1e5")
 	)
 	(hierarchical_label "AZ_LIM_CCW"
 		(shape output)
@@ -2919,6 +3149,17 @@
 			(justify right)
 		)
 		(uuid "a528941f-d03b-490d-8762-cde14e45eaea")
+	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 166.37 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a7a0d32e-a334-41a4-8bbf-917445de7c88")
 	)
 	(hierarchical_label "ALT_ENC_A"
 		(shape output)
@@ -2996,16 +3237,6 @@
 			(justify left)
 		)
 		(uuid "d81991f8-3a9b-5ae5-83de-16bd1f75e6dd")
-	)
-	(label "AZ_DRV_DIR"
-		(at 128.27 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f0133130-6aa4-4d7e-a1f0-b338d92fe159")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -4098,6 +4329,93 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 186.69 57.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "371a092c-d452-45ab-a690-a967ff68a403")
+		(property "Reference" "J310"
+			(at 189.23 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "INA260 I2C"
+			(at 189.23 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 186.69 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "I2C cable to the INA260 current sensor (A401, power sheet): 1 3V3, 2 SDA, 3 SCL, 4 GND"
+			(at 186.69 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4ad48e02-63cd-4f35-a49e-3243e91cbc7e")
+		)
+		(pin "2"
+			(uuid "fc16253e-c5e7-441b-b44c-4d85c0c12e4f")
+		)
+		(pin "3"
+			(uuid "5b055ed4-65d8-44ae-8323-6c071b161a49")
+		)
+		(pin "4"
+			(uuid "0d802e25-9b0a-41b0-8a9d-b1b3d043e505")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "J310")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 92.71 125.73 90)
 		(unit 1)
@@ -4665,6 +4983,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 176.53 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "632288b9-b638-47bc-864a-accb4cb7bfde")
+		(property "Reference" "#PWR0328"
+			(at 176.53 59.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 176.53 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e412f9b-83d7-4150-a08d-e10d85db36df")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0328")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 95.25 153.67 90)
 		(unit 1)
@@ -4740,6 +5135,83 @@
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
 					(reference "C303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 176.53 52.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "7eeae1fd-8738-4693-a4f7-56fdd404f5f4")
+		(property "Reference" "#PWR0327"
+			(at 176.53 47.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 176.53 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 176.53 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 176.53 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 176.53 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c791957-4451-42f7-82f1-318f86824897")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0327")
 					(unit 1)
 				)
 			)
@@ -6755,5 +7227,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )

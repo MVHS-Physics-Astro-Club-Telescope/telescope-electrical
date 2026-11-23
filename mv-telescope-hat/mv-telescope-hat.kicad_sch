@@ -6,14 +6,14 @@
 	(paper "A4")
 	(title_block
 		(title "MV Telescope electrical: sheet map")
-		(date "2026-11-06")
-		(rev "v2")
+		(date "2026-11-22")
+		(rev "v3")
 		(company "MV Astronomy")
 		(comment 1 "Each block is one owner's sheet file. Double-click a block to open it.")
 		(comment 2 "The wires on this page are the agreed connections between sheets.")
 	)
 	(lib_symbols)
-	(text "Pi → HAT: the 17 Pi signals from the pin map.     HAT → power: the 6 buffered lines that run by cable to the two DM542T drivers.\n+5V, +3V3 and GND are power symbols: they join across every sheet on their own, so they need no wire here."
+	(text "+5V, +3V3 and GND join across sheets on their own: no wire needed here."
 		(exclude_from_sim no)
 		(at 25.4 30.48 0)
 		(effects
@@ -24,7 +24,7 @@
 		)
 		(uuid "1974ace9-3f9a-5b59-a3ff-b85cb3d5ea9e")
 	)
-	(text "WHO OWNS WHAT (one file each, so nobody edits the same file)\n  •  Pi header  ·  pi_header.kicad_sch  ·  Eeshan  ·  done: J1 + the pin map\n  •  HAT signals  ·  hat_signals.kicad_sch  ·  Ibrahim  ·  74ACT244 buffer, driver / limit / encoder connectors, pull-ups, caps\n  •  Power and drivers  ·  power.kicad_sch  ·  Eeshan for now, open to a new member  ·  battery to DM542Ts (off the PCB)\n  •  This page and the project files (.kicad_pro, .kicad_pcb)  ·  Eeshan\n\nRULES\n  1. Only edit your own sheet file. Open the project, then double-click your block on this page.\n  2. The pins and wires on this page are the contract. Need a new signal between sheets? Ask Eeshan: he adds it here and in both sheets.\n  3. Annotate only your sheet: Tools > Annotate Schematic, scope 'Current sheet only', numbering 'First free after sheet number × 100'.\n      So HAT signals parts become U301, R301, J301...  and power parts F401, SW401...  No two sheets can pick the same reference.\n  4. Power and drivers is set to 'Exclude from board': nothing on it goes on the HAT PCB.\n  5. Every change goes through a GitHub pull request. The ERC check runs on its own and must pass before it merges."
+	(text "OWNERS: Pi header and Power and drivers: Eeshan. HAT signals: Ibrahim.\nEdit only your own sheet. Annotate 'Current sheet only', 'First free after sheet number × 100'.\nEvery change goes through a pull request, and ERC must pass."
 		(exclude_from_sim no)
 		(at 25.4 112 0)
 		(effects
@@ -35,17 +35,67 @@
 		)
 		(uuid "57f34cfe-b92c-5ea9-9866-85eca1d8bcd4")
 	)
-	(text "HOW THE SHEETS CONNECT"
-		(exclude_from_sim no)
-		(at 25.4 25.4 0)
-		(effects
-			(font
-				(size 2 2)
-				(bold yes)
-			)
-			(justify left top)
+	(wire
+		(pts
+			(xy 134.62 99.06) (xy 134.62 106.68)
 		)
-		(uuid "8ca6ae66-858b-5529-967a-11b7bbda2f50")
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65a85e7d-05d6-48d1-b612-8ca9d2ba1d6f")
+	)
+	(wire
+		(pts
+			(xy 139.7 99.06) (xy 139.7 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97f4d1e1-37a6-4e43-bd60-c2b266aeb752")
+	)
+	(junction
+		(at 134.62 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a063454f-28d2-4fa9-b4ab-c45c0249ed1d")
+	)
+	(junction
+		(at 139.7 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12af5794-fb8f-447b-81b3-3e7b8e3fe7db")
+	)
+	(wire
+		(pts
+			(xy 71.12 109.22) (xy 139.7 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "749da9ce-d4d6-419a-a612-1621f3801508")
+	)
+	(wire
+		(pts
+			(xy 139.7 109.22) (xy 187.96 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d863748d-d610-45fd-96b2-f758a60e40c4")
+	)
+	(wire
+		(pts
+			(xy 66.04 96.52) (xy 76.2 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09b98ad6-b316-5510-a349-4531e363d9c1")
 	)
 	(wire
 		(pts
@@ -56,6 +106,16 @@
 			(type default)
 		)
 		(uuid "0acb917d-a941-5611-b8a4-939408dbc1e9")
+	)
+	(wire
+		(pts
+			(xy 182.88 63.5) (xy 195.58 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cff3a0d-b1dc-57d0-8df2-83835ad4e53e")
 	)
 	(wire
 		(pts
@@ -96,6 +156,26 @@
 			(type default)
 		)
 		(uuid "26e8d51a-f1bc-5325-a3f2-f2e888ab8c72")
+	)
+	(wire
+		(pts
+			(xy 76.2 106.68) (xy 134.62 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c353cc89-a9fa-40f4-8bf1-eccf3834ac18")
+	)
+	(wire
+		(pts
+			(xy 134.62 106.68) (xy 182.88 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76d8d74e-9e4f-4119-84aa-d8b7d1acc161")
 	)
 	(wire
 		(pts
@@ -189,6 +269,26 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 66.04) (xy 195.58 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a11ee113-cdd2-509c-96d1-2e765074f94a")
+	)
+	(wire
+		(pts
+			(xy 71.12 99.06) (xy 71.12 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4f8b500-5168-51e4-a916-08267407faee")
+	)
+	(wire
+		(pts
 			(xy 66.04 55.88) (xy 104.14 55.88)
 		)
 		(stroke
@@ -206,6 +306,26 @@
 			(type default)
 		)
 		(uuid "acc28123-bf9b-5b8b-994c-e7b5cc3f23af")
+	)
+	(wire
+		(pts
+			(xy 187.96 109.22) (xy 187.96 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad1d9da7-0360-5316-8db7-5a23738e5db3")
+	)
+	(wire
+		(pts
+			(xy 76.2 96.52) (xy 76.2 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af63397d-3e91-532f-ab77-7c3b793e01bf")
 	)
 	(wire
 		(pts
@@ -239,6 +359,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 99.06) (xy 71.12 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1381f4-40f8-544a-8d87-717993eebc3d")
+	)
+	(wire
+		(pts
 			(xy 66.04 81.28) (xy 104.14 81.28)
 		)
 		(stroke
@@ -246,6 +376,16 @@
 			(type default)
 		)
 		(uuid "db4a541b-6981-5396-93eb-7545e8e403b5")
+	)
+	(wire
+		(pts
+			(xy 182.88 106.68) (xy 182.88 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de7abb84-7d8f-52ce-89c3-11e1c6c00606")
 	)
 	(wire
 		(pts
@@ -336,6 +476,16 @@
 			(justify left bottom)
 		)
 		(uuid "26475c84-6fe1-53e4-941c-30e4f0c77adf")
+	)
+	(label "I2C_SDA"
+		(at 124.46 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "40638b9c-5de5-5c73-933b-083bc5009735")
 	)
 	(label "AZ_DIR"
 		(at 73.66 55.88 0)
@@ -477,6 +627,16 @@
 		)
 		(uuid "d17008e7-3a61-58ca-b11d-cce1b5f640e1")
 	)
+	(label "I2C_SCL"
+		(at 144.78 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "de0235d7-e315-57f3-91db-ea0b2ce30caf")
+	)
 	(label "AZ_ENC_B"
 		(at 73.66 86.36 0)
 		(effects
@@ -509,7 +669,7 @@
 	)
 	(sheet
 		(at 25.4 40.64)
-		(size 40.64 58.42)
+		(size 40.64 63.5)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -535,7 +695,7 @@
 			)
 		)
 		(property "Sheetfile" "pi_header.kicad_sch"
-			(at 25.4 99.6446 0)
+			(at 25.4 104.7246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -545,8 +705,8 @@
 				(justify left top)
 			)
 		)
-		(property "Owner" "Owner: Eeshan (done, pin map v1)"
-			(at 25.4 102.1846 0)
+		(property "Owner" "Owner: Eeshan (done, pin map v1.1)"
+			(at 25.4 107.2646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -726,6 +886,26 @@
 				(justify right)
 			)
 		)
+		(pin "I2C_SDA" bidirectional
+			(at 66.04 96.52 0)
+			(uuid "31e3bf53-84d7-5c2b-b4d0-bc76cdb4596c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C_SCL" output
+			(at 66.04 99.06 0)
+			(uuid "7f16b146-e597-5917-b0de-a2ec1abd49ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
@@ -736,7 +916,7 @@
 	)
 	(sheet
 		(at 195.58 40.64)
-		(size 50.8 22.86)
+		(size 50.8 30.48)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
@@ -762,7 +942,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 195.58 64.0846 0)
+			(at 195.58 71.7046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -773,7 +953,7 @@
 			)
 		)
 		(property "Owner" "Owner: Eeshan for now (open to a new member)"
-			(at 195.58 66.6246 0)
+			(at 195.58 74.2446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -836,6 +1016,26 @@
 		(pin "AZ_DRV_ENA" input
 			(at 195.58 58.42 180)
 			(uuid "a03e9cea-2e9b-5efa-b049-4084044186ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SDA" bidirectional
+			(at 195.58 63.5 180)
+			(uuid "eef8af25-8d54-5457-b4ad-9809079f7e0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SCL" input
+			(at 195.58 66.04 180)
+			(uuid "1940c58b-bc76-541e-9538-fa7cc1cebd5f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1130,6 +1330,26 @@
 				(justify right)
 			)
 		)
+		(pin "I2C_SDA" bidirectional
+			(at 134.62 99.06 270)
+			(uuid "bfd36b63-f349-4681-8c70-db0f52e058f6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SCL" input
+			(at 139.7 99.06 270)
+			(uuid "5682748a-bb58-4303-983c-d7b3d2a0b8cb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
@@ -1143,4 +1363,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

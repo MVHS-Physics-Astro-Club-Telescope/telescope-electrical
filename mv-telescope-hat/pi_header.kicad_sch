@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Pi header: pin map")
-		(date "2026-10-31")
-		(rev "pin map v1")
+		(date "2026-11-22")
+		(rev "pin map v1.1")
 		(company "MV Astronomy")
 		(comment 1 "Owner: Eeshan. The labels on J1 are the pin map.")
 		(comment 2 "Each label is a hierarchical label: the root sheet wires it to the HAT signals sheet.")
@@ -1782,7 +1782,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "PIN MAP v1, 2026-10-31 (Raspberry Pi 4, BCM GPIO numbers, J1 = 40-pin header)\n\nDRIVER SIGNALS: Pi GPIO → 74ACT244 → DM542T minus pins (common anode)\nALT_PUL  GPIO12  pin 32  →  1A1 (2) / 1Y1 (18)  →  ALT PUL−   [hardware PWM0]\nALT_DIR  GPIO16  pin 36  →  1A2 (4) / 1Y2 (16)  →  ALT DIR−\nALT_ENA  GPIO5   pin 29  →  1A3 (6) / 1Y3 (14)  →  ALT ENA−\nAZ_PUL   GPIO13  pin 33  →  2A1 (11) / 2Y1 (9)  →  AZ PUL−   [hardware PWM1]\nAZ_DIR   GPIO26  pin 37  →  2A2 (13) / 2Y2 (7)  →  AZ DIR−\nAZ_ENA   GPIO6   pin 31  →  2A3 (15) / 2Y3 (5)  →  AZ ENA−\nBUF_OE_N GPIO4   pin 7   →  1OE (1) + 2OE (19), 10k pull-up to +3V3\nUnused 244 inputs 1A4 (8), 2A4 (17) → GND.  VCC (20) = +5V with 100n to GND (10).\n+5V → PUL+, DIR+, ENA+ of both drivers (same +5V as the 244). DM542T logic selector → 5V (ships at 24V).\n\nLIMIT SWITCHES: NC contact between net and GND, 10k pull-up to +3V3, 100n to GND\nALT_LIM_LOW  GPIO17 pin 11   |   ALT_LIM_HIGH  GPIO27 pin 13\nAZ_LIM_CW    GPIO22 pin 15   |   AZ_LIM_CCW    GPIO23 pin 16\nReads LOW normally. HIGH = switch hit OR wire broken → software stops that axis.\n\nENCODERS (none bought yet, spots only): 3.3V max into the Pi\nALT_ENC_A  GPIO24 pin 18   |   ALT_ENC_B  GPIO25 pin 22\nAZ_ENC_A   GPIO20 pin 38   |   AZ_ENC_B   GPIO21 pin 40\n\nSOFTWARE LOGIC (common anode flips it: GPIO LOW = optocoupler ON)\nPUL: idle HIGH. A step happens on HIGH → LOW. Low ≥ 2.5 µs, high ≥ 2.5 µs (200 kHz max).\nDIR: set ≥ 5 µs before the step edge. Which level is clockwise gets set at the bench test.\nENA: HIGH = driver ON, holding torque (same as ENA unwired). LOW = driver OFF, motor turns by hand.\nBUF_OE_N: HIGH (boot default, pulled up) = 244 outputs off: drivers ON and holding, no steps.\n    Software sets PUL HIGH, ENA, DIR first, then drives BUF_OE_N LOW.\n\nLEFT FREE (X on J1): pins 27/28 ID EEPROM only (HAT spec). GPIO2/3 I2C1 (1.8k pull-ups on the Pi)\nfor a future sensor. GPIO14/15 UART for serial console / GPS. GPIO7-11 SPI0 for SPI absolute encoders.\nSPARE: GPIO18 (pin 12), GPIO19 (pin 35)."
+	(text "PIN MAP v1.1 (Pi 4, BCM GPIO numbers)\nPUL (GPIO12, GPIO13 = hardware PWM): idles HIGH, steps on HIGH → LOW, each ≥ 2.5 µs. Set DIR ≥ 5 µs before.\nENA: LOW = driver off. BUF_OE_N: HIGH at boot = no steps. Set PUL, DIR, ENA first, then set it LOW.\nLimit switches: LOW = OK, HIGH = hit or broken wire → stop that axis.\nINA260: I2C address 0x40.\nLeft free: pins 27/28 (HAT ID EEPROM), GPIO14/15 (UART), GPIO7-11 (SPI)."
 		(exclude_from_sim no)
 		(at 118.11 22.86 0)
 		(effects
@@ -1874,16 +1874,8 @@
 		(uuid "dff65ba5-5fa1-4b17-9227-d5f446e7b279")
 	)
 	(no_connect
-		(at 60.96 33.02)
-		(uuid "e87ddbbf-8da9-4325-8067-bbe0e7e5ce40")
-	)
-	(no_connect
 		(at 73.66 55.88)
 		(uuid "f2d22d07-2e24-4ae8-b6da-a90f01760071")
-	)
-	(no_connect
-		(at 60.96 30.48)
-		(uuid "f7990114-94f5-48ff-9503-d14864c5db6c")
 	)
 	(wire
 		(pts
@@ -1974,6 +1966,16 @@
 			(type solid)
 		)
 		(uuid "3b2261b8-cc6a-4f24-9a9d-8411b13f362c")
+	)
+	(wire
+		(pts
+			(xy 60.96 30.48) (xy 31.75 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d18777c-24f3-55f6-b9b5-c3249d68ff7b")
 	)
 	(wire
 		(pts
@@ -2164,6 +2166,16 @@
 			(type solid)
 		)
 		(uuid "9705171e-2fe8-4d02-a114-94335e138862")
+	)
+	(wire
+		(pts
+			(xy 60.96 33.02) (xy 31.75 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d3228d4-0355-5ba6-b1e7-45742def3c3e")
 	)
 	(wire
 		(pts
@@ -2491,6 +2503,17 @@
 		)
 		(uuid "b64a2cd2-1bcf-4d65-ac61-508537c93d3e")
 	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 31.75 30.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b671fcc3-df17-534c-b862-a9569c5a2ef0")
+	)
 	(hierarchical_label "ALT_ENC_A"
 		(shape input)
 		(at 100.33 48.26 0)
@@ -2501,6 +2524,17 @@
 			(justify left)
 		)
 		(uuid "b8e48041-ff05-4814-a4a3-fb04f84542aa")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape output)
+		(at 31.75 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c51c4372-cd06-545f-b022-bf27f8fd19ff")
 	)
 	(symbol
 		(lib_id "power:+5V")
