@@ -13,7 +13,7 @@ off-board power wiring, in one project with one sheet file per owner.
 |---|---|---|---|
 | Root (sheet map) | `mv-telescope-hat.kicad_sch` | Eeshan | The three blocks and the wires between them |
 | Pi header | `pi_header.kicad_sch` | Eeshan | J1 (40-pin header) and the pin map. Done, v1 |
-| HAT signals | `hat_signals.kicad_sch` | Ibrahim | 74ACT244 buffer, driver / limit-switch / encoder connectors, pull-ups, caps |
+| HAT signals | `hat_signals.kicad_sch` | Ibrahim | 74ACT244 buffer, driver / limit-switch / encoder connectors, encoder level shifter, pull-ups, caps |
 | Power and drivers | `power.kicad_sch` | Eeshan for now, open to a new member | Battery, fuses, kill switch, PPBA, 24 V supply, DM542T drivers (off the PCB) |
 | Project and PCB | `.kicad_pro`, `.kicad_pcb` | Eeshan | |
 
