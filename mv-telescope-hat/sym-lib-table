@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "MV") (type "KiCad") (uri "${KIPRJMOD}/MV.kicad_sym") (options "") (descr "MV Astronomy: off-the-shelf modules that have no KiCad symbol"))
+)

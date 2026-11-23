@@ -6,14 +6,14 @@
 	(paper "A4")
 	(title_block
 		(title "MV Telescope electrical: sheet map")
-		(date "2026-11-06")
-		(rev "v2")
+		(date "2026-11-22")
+		(rev "v3")
 		(company "MV Astronomy")
 		(comment 1 "Each block is one owner's sheet file. Double-click a block to open it.")
 		(comment 2 "The wires on this page are the agreed connections between sheets.")
 	)
 	(lib_symbols)
-	(text "Pi → HAT: the 17 Pi signals from the pin map.     HAT → power: the 6 buffered lines that run by cable to the two DM542T drivers.\n+5V, +3V3 and GND are power symbols: they join across every sheet on their own, so they need no wire here."
+	(text "Pi → HAT: the 17 Pi signals from the pin map.     HAT → power: the 6 buffered lines that run by cable to the two DM542T drivers.\nPi → power: I2C_SDA and I2C_SCL to the INA260 current sensor (through J201 on the HAT).\n+5V, +3V3 and GND are power symbols: they join across every sheet on their own, so they need no wire here."
 		(exclude_from_sim no)
 		(at 25.4 30.48 0)
 		(effects
@@ -507,9 +507,129 @@
 		)
 		(uuid "f61c8bc0-9c5b-5583-8d22-4481ee86e0bb")
 	)
+	(wire
+		(pts
+			(xy 66.04 96.52) (xy 76.2 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09b98ad6-b316-5510-a349-4531e363d9c1")
+	)
+	(wire
+		(pts
+			(xy 76.2 96.52) (xy 76.2 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af63397d-3e91-532f-ab77-7c3b793e01bf")
+	)
+	(wire
+		(pts
+			(xy 76.2 106.68) (xy 182.88 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27aeba68-a71b-5281-8265-04b3a03fed20")
+	)
+	(wire
+		(pts
+			(xy 182.88 106.68) (xy 182.88 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de7abb84-7d8f-52ce-89c3-11e1c6c00606")
+	)
+	(wire
+		(pts
+			(xy 182.88 63.5) (xy 195.58 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cff3a0d-b1dc-57d0-8df2-83835ad4e53e")
+	)
+	(wire
+		(pts
+			(xy 66.04 99.06) (xy 71.12 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1381f4-40f8-544a-8d87-717993eebc3d")
+	)
+	(wire
+		(pts
+			(xy 71.12 99.06) (xy 71.12 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4f8b500-5168-51e4-a916-08267407faee")
+	)
+	(wire
+		(pts
+			(xy 71.12 109.22) (xy 187.96 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "045a4e5d-23e0-50cc-983f-3754e4d86c81")
+	)
+	(wire
+		(pts
+			(xy 187.96 109.22) (xy 187.96 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad1d9da7-0360-5316-8db7-5a23738e5db3")
+	)
+	(wire
+		(pts
+			(xy 187.96 66.04) (xy 195.58 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a11ee113-cdd2-509c-96d1-2e765074f94a")
+	)
+	(label "I2C_SDA"
+		(at 124.46 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "40638b9c-5de5-5c73-933b-083bc5009735")
+	)
+	(label "I2C_SCL"
+		(at 144.78 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "de0235d7-e315-57f3-91db-ea0b2ce30caf")
+	)
 	(sheet
 		(at 25.4 40.64)
-		(size 40.64 58.42)
+		(size 40.64 63.5)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -535,7 +655,7 @@
 			)
 		)
 		(property "Sheetfile" "pi_header.kicad_sch"
-			(at 25.4 99.6446 0)
+			(at 25.4 104.7246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -545,8 +665,8 @@
 				(justify left top)
 			)
 		)
-		(property "Owner" "Owner: Eeshan (done, pin map v1)"
-			(at 25.4 102.1846 0)
+		(property "Owner" "Owner: Eeshan (done, pin map v1.1)"
+			(at 25.4 107.2646 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -726,6 +846,26 @@
 				(justify right)
 			)
 		)
+		(pin "I2C_SDA" bidirectional
+			(at 66.04 96.52 0)
+			(uuid "31e3bf53-84d7-5c2b-b4d0-bc76cdb4596c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C_SCL" output
+			(at 66.04 99.06 0)
+			(uuid "7f16b146-e597-5917-b0de-a2ec1abd49ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 		(instances
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
@@ -736,7 +876,7 @@
 	)
 	(sheet
 		(at 195.58 40.64)
-		(size 50.8 22.86)
+		(size 50.8 30.48)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
@@ -762,7 +902,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 195.58 64.0846 0)
+			(at 195.58 71.7046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -773,7 +913,7 @@
 			)
 		)
 		(property "Owner" "Owner: Eeshan for now (open to a new member)"
-			(at 195.58 66.6246 0)
+			(at 195.58 74.2446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -836,6 +976,26 @@
 		(pin "AZ_DRV_ENA" input
 			(at 195.58 58.42 180)
 			(uuid "a03e9cea-2e9b-5efa-b049-4084044186ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SDA" bidirectional
+			(at 195.58 63.5 180)
+			(uuid "eef8af25-8d54-5457-b4ad-9809079f7e0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C_SCL" input
+			(at 195.58 66.04 180)
+			(uuid "1940c58b-bc76-541e-9538-fa7cc1cebd5f")
 			(effects
 				(font
 					(size 1.27 1.27)

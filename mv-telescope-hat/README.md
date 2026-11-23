@@ -81,7 +81,8 @@ because the Pi's GPIO is not 5V tolerant (Raspberry Pi docs).
 ## Left free on purpose (X on J1)
 
 - Pins 27/28 (GPIO0/1): ID EEPROM only. The HAT spec says "if unused these pins must be left unconnected".
-- GPIO2/3 (pins 3/5): I2C1, which has fixed 1.8k pull-ups on the Pi. Keep for a future sensor.
+- GPIO2/3 (pins 3/5): I2C1, which has fixed 1.8k pull-ups on the Pi. Now used (pin map v1.1, 2026-11-22): the INA260
+  current sensor on the power sheet (A401, address 0x40), through the 4-pin header J201 on the HAT.
 - GPIO14/15 (pins 8/10): UART, for a serial console or GPS.
 - GPIO7–11 (pins 19/21/23/24/26): SPI0, if we ever use SPI absolute encoders.
 - Spare: GPIO18 (pin 12) and GPIO19 (pin 35). One possible use is the DM542T V4.0 alarm outputs; check
