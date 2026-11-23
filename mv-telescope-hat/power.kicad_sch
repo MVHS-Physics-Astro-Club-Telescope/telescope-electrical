@@ -3866,7 +3866,7 @@
 		)
 		(uuid "bd4ae8eb-20f2-554b-96fb-c152ac522aa5")
 	)
-	(text "WUPP 6-way fuse block (2 of 6 circuits used)"
+	(text "WUPP fuse block"
 		(exclude_from_sim no)
 		(at 130.81 25.4 0)
 		(effects
@@ -3875,7 +3875,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "8d815d09-1531-5ff5-b21a-b293dd94cf71")
+		(uuid "1a2cf1a7-51dd-5fb7-98e9-743af2c368e0")
 	)
 	(symbol
 		(lib_id "MV:PPBA_Gen2")
@@ -4605,7 +4605,7 @@
 			)
 		)
 	)
-	(text "These are the Pi's own rails.\nThey reach the HAT through J1:\n5V on pins 2, 4; 3V3 on pins 1, 17."
+	(text "Pi rails, to the HAT through J1"
 		(exclude_from_sim no)
 		(at 264.16 41.91 0)
 		(effects
@@ -4614,7 +4614,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "c7f55c66-4c7e-571c-b451-16a5d548efb0")
+		(uuid "0b9c9a3c-cdf2-5353-bb6a-512b8f1ed7db")
 	)
 	(symbol
 		(lib_id "MV:Camera_12V")
@@ -6931,7 +6931,7 @@
 		)
 		(uuid "b1d6b925-83c2-5863-a97c-11a6075c6696")
 	)
-	(text "BOTH DRIVERS\nS2 logic selector → 5V (ships at 24V).\nSW5-SW8 → 25600 steps/rev.\nSW1-SW3 (current) → set from the motor pick."
+	(text "BOTH DRIVERS: S2 → 5V, SW5-8 → 25600 steps/rev.\nSW1-3 (current): from the motor pick."
 		(exclude_from_sim no)
 		(at 279.4 152.4 0)
 		(effects
@@ -6940,7 +6940,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "9dc09eb9-4d85-59e1-b291-c76da9537853")
+		(uuid "0ceed0d5-37a5-5e9d-8277-38059a386ee5")
 	)
 	(text "POWER AND DRIVERS"
 		(exclude_from_sim no)
@@ -6954,7 +6954,7 @@
 		)
 		(uuid "a0cac677-0a3c-5952-ae69-1334428e378f")
 	)
-	(text "Battery → main fuse → kill switch → current sensor → fuse block → two branches. Top: Pegasus powerbox (A402) runs the Pi, both cameras, the autofocuser and the dew heater. Bottom: 24 V supply (PS401) runs the two motor drivers.\nNothing here is on the HAT PCB: every part is a separate box wired by hand. Wire: 12 AWG copper battery to fuse block, 16 AWG after it."
+	(text "Off-board: every part here is wired by hand. None of it is on the HAT PCB."
 		(exclude_from_sim no)
 		(at 20.32 19.05 0)
 		(effects
@@ -6963,9 +6963,9 @@
 			)
 			(justify left top)
 		)
-		(uuid "ce10fde1-33ea-5037-813b-e093227b3c76")
+		(uuid "72763cf2-a067-5590-a4b2-7e4742ae178d")
 	)
-	(text "WHY EACH PART IS HERE\nF401  15 A main fuse, within ~7 in (18 cm) of battery +. It protects the 12 AWG cable: the battery can push far more current than that cable can carry.\n          15 A, not 20 A, because the current sensor A401 is rated 15 A continuous.\nSW401  Kill switch: one switch cuts everything. To charge: switch OFF, then clip the charger onto the battery posts.\nA401  INA260 current sensor. Everything the telescope draws flows through it, so the Pi can read battery current, voltage and power over I2C (address 0x40).\n          Its I2C cable plugs into J201 on the HAT (Pi header sheet). VCC on +3V3: its I2C pull-ups go to VCC, and the Pi's pins 3 and 5 take 3.3 V only.\n          VBUS (X): the board's VB jumper already ties it to VIN+. ALERT (X): not used, the Pi reads the sensor over I2C instead (TI datasheet 8.3.3.2 allows it).\nF402, F403  One 10 A fuse per branch, so a fault in one branch blows only that branch's fuse. Both sit in the WUPP fuse block; its other 4 circuits are spare.\nA402  Pegasus Pocket Powerbox Advance Gen2. Takes 11.0-14.5 V and shuts every output off above 14.5 V.\n          Hub port 1 (5 V, up to 3 A) powers the Pi. Never switch port 1 off in software (ports 1 and 2 can be): the Pi would cut its own power.\n          12 V out 1 powers the main camera. Hub port 2 powers the guide camera, hub port 4 the autofocuser. Dew port A runs the secondary heater.\n          Data: the PPBA's USB3 type-B socket goes to a Pi USB3 port, so the Pi reaches all three devices through the hub. The main camera's USB3 cable goes to hub port 3.\nPS401  Mean Well SD-50A-24: turns 9.2-18 V into 24 V, 2.1 A (50 W) for the two drivers. FG (pin 3) stays empty.\nC401, C402  1000 uF 63 V, one across each driver's supply. When a motor slows down it pushes energy back into the 24 V line (DM542T manual 6.2).\n          The capacitor soaks that up and supplies the quick current pulses, so the 24 V stays steady.\nA403, A404  DM542T drivers. Each gets its own pair of wires from PS401, never driver-to-driver (DM542T manual 8).\n          PUL+, DIR+, ENA+ sit on +5V. The 74ACT244 on the HAT pulls PUL-, DIR-, ENA- low to switch each input on. ENA- low = driver OFF.\n          ALM+ / ALM- (the fault output) are not used yet.\n\nTWO GROUNDS\nGND        The Pi's ground = battery minus. Treat them as one wire: the powerbox and the main camera both plug into the Pi over USB, and a USB cable joins grounds.\n               Every GND wire on this sheet lands on the fuse block's negative bus bar.\n24V_RTN  The 24 V supply's own minus. PS401 is isolated (1.5 kV between input and output), so 24V_RTN is NOT joined to GND.\n               It goes only to the two drivers and C401 / C402. The drivers' signal inputs are optocouplers, so the HAT never needs 24V_RTN.\n\nOPEN\nMotors M401, M402: ALT 23HS39-5004S is proposed (on hold). AZ is a 17HS19-2004S1 or a second 23HS39, waiting on the torque numbers.\n     The drivers' current switches (SW1-SW3) are set from the motor pick.\nPS401 is 50 W shared by both drivers. Re-check it once the motors and current settings are picked (DM542T manual 6.1: a shared supply needs enough power for every driver on it).\nNot bought yet: PS401 (SD-50A-24), F401's holder (Powerwerx IFH-12-02), C401 + C402 (Nichicon 1000 uF 63 V), A401 (Adafruit INA260, 4226).\nDew heater A409: model open (SV192 strip, R-Sky S and a 12 V 7 W film are all on the lists).\nNot drawn yet: mirror fan, power source not decided (PPBA dew port B gives speed control; a 12 V output runs it flat out). Surge protection (the August plan had a 1.5KE33CA TVS diode)."
+	(text "NOTES\nF401 within 7 in of battery +. Charge with SW401 OFF.\nNever switch PPBA hub port 1 off in software: it powers the Pi.\n24V_RTN is not GND (PS401 is isolated). Each driver gets its own wires from PS401.\nENA- low = driver OFF.\n\nOPEN: motor models (they set SW1-3 and PS401's size), dew heater model, mirror fan power, surge protection."
 		(exclude_from_sim no)
 		(at 20.32 111.76 0)
 		(effects
@@ -6974,6 +6974,6 @@
 			)
 			(justify left top)
 		)
-		(uuid "f9ab369a-71a7-504a-b40c-0e7d6a5c5c0f")
+		(uuid "3a15202d-dbc7-5921-8194-a8e0db90ef3c")
 	)
 )
