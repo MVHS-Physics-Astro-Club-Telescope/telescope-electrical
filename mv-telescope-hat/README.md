@@ -6,7 +6,8 @@ sheet file per owner (see the repo README):
 
 - `mv-telescope-hat.kicad_sch`: root sheet map. Three blocks, and the wires between them are the agreed connections.
 - `pi_header.kicad_sch` (Eeshan): J1, the 40-pin header. Its 17 hierarchical labels are the pin map below.
-- `hat_signals.kicad_sch` (Ibrahim): the 74ACT244, driver terminals, limit-switch and encoder connectors. It starts
+- `hat_signals.kicad_sch` (Ibrahim): the 74ACT244, driver terminals, limit-switch and encoder connectors, and the
+  encoder level shifter (Eeshan, 2026-11-22). It starts
   with the 17 Pi labels on the left and the driver terminals J301/J302 on the right.
 - `power.kicad_sch` (owner open): battery to DM542Ts, excluded from the board. It starts with the six driver-cable
   labels.
@@ -52,16 +53,27 @@ Wire the NC contact between the net and GND. Add a 10k pull-up to +3V3 and 100 n
 normally and HIGH when the switch is hit or the wire breaks; software stops that axis. Only 3.3V is safe here,
 because the Pi's GPIO is not 5V tolerant (Raspberry Pi docs).
 
-## Encoders (none bought yet; spots only)
+## Encoders (none bought yet; 3.3 V or 5 V, picked with JP301)
 
-| Net | GPIO | Pin |
-|---|---|---|
-| ALT_ENC_A | GPIO24 | 18 |
-| ALT_ENC_B | GPIO25 | 22 |
-| AZ_ENC_A | GPIO20 | 38 |
-| AZ_ENC_B | GPIO21 | 40 |
+| Net | GPIO | Pin | Buffer in / out |
+|---|---|---|---|
+| ALT_ENC_A | GPIO24 | 18 | U302 1 / 6 |
+| ALT_ENC_B | GPIO25 | 22 | U302 3 / 4 |
+| AZ_ENC_A | GPIO20 | 38 | U303 1 / 6 |
+| AZ_ENC_B | GPIO21 | 40 | U303 3 / 4 |
 
-5V encoders need level shifting down to 3.3V before they reach the Pi.
+The Pi's GPIO takes 3.3 V at most, so every encoder line passes through a level shifter on the HAT signals sheet:
+
+- J307 (ALT) and J308 (AZ): 1 GND, 2 ENC_PWR (the encoder's supply), 3 B, 4 A.
+- JP301 sets ENC_PWR. It ships bridged 1–2 for +3V3. For a 5 V encoder, cut 1–2 and bridge 2–3 for +5V.
+- R306–R309 (10k): pull-ups from each line to ENC_PWR, for encoders whose outputs only pull to ground.
+- U302 (ALT), U303 (AZ): 74LVC2G17 dual Schmitt-trigger buffers on +3V3, so their outputs never exceed 3.3 V.
+  TI: "Inputs accept voltages to 5.5V". The Schmitt input turns a slow or noisy edge into one clean step.
+- C306, C307: 100 nF on each buffer's VCC (pin 5).
+
+Buying an encoder: it must run on 3.3 V or 5 V, and its A/B outputs must be open-collector (NPN) or push-pull at
+its own supply. Then the signal's high equals ENC_PWR. Not supported: 12–24 V-only encoders, and differential
+(A+/A−, line driver, RS-422) outputs.
 
 ## Software logic (common anode inverts it: GPIO LOW = optocoupler ON)
 
@@ -96,5 +108,5 @@ because the Pi's GPIO is not 5V tolerant (Raspberry Pi docs).
 - No driver or switch signal uses a pin with another job we might want: I2C, UART, SPI0 or ID EEPROM.
 
 Sources: DM542T manual V2.0 (oyostepper.com), STEPPERONLINE DM542T Amazon listing B06Y5VPSFN (V4.0 notes),
-TI SN74ACT244 datasheet, BCM2711 ARM Peripherals (Table 94), Raspberry Pi 4 reduced schematics (J8),
+TI SN74ACT244 datasheet, TI SN74LVC2G17 datasheet, BCM2711 ARM Peripherals (Table 94), Raspberry Pi 4 reduced schematics (J8),
 raspberrypi/hats designguide.md, Raspberry Pi docs gpio-on-raspberry-pi.adoc.

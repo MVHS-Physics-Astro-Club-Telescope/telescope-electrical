@@ -13,6 +13,539 @@
 		(comment 2 "Pi signals in on the left, buffered driver lines out on the right.")
 	)
 	(lib_symbols
+(symbol "74xGxx:74LVC2G17"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -1.27 7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 2.54 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dual Buffer, Schmitt Triggered, Low-Voltage CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Dual Buffer Schmitt LVC CMOS"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SG-* SOT*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "74LVC2G17_1_1"
+			(polyline
+				(pts
+					(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.81 1.27) (xy -2.54 1.27) (xy -2.54 -1.27) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 0 180)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "74LVC2G17_2_1"
+			(polyline
+				(pts
+					(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -3.81 1.27) (xy -2.54 1.27) (xy -2.54 -1.27) (xy 0 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(polyline
+				(pts
+					(xy -2.54 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 12.7 0 180)
+				(length 7.62)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "74LVC2G17_3_0"
+			(rectangle
+				(start -5.08 -5.08)
+				(end 5.08 5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "74LVC2G17_3_1"
+			(pin power_in line
+				(at 0 -10.16 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 10.16 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "Jumper:SolderJumper_3_Bridged12"
+		(pin_names
+			(offset 0)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "JP"
+			(at -2.54 -2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_3_Bridged12"
+			(at 0 2.794 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 -15.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "3-pole Solder Jumper, pins 1+2 closed/bridged"
+			(at 0 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Solder Jumper SPDT"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "SolderJumper*Bridged12*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "SolderJumper_3_Bridged12_0_1"
+			(polyline
+				(pts
+					(xy -2.54 0) (xy -2.032 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.016 1.016) (xy -1.016 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.016 0.508)
+				(end -0.508 -0.508)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(arc
+				(start -1.016 -1.016)
+				(mid -2.0276 0)
+				(end -1.016 1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(rectangle
+				(start -0.508 1.016)
+				(end 0.508 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -1.27) (xy 0 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(arc
+				(start 1.016 1.016)
+				(mid 2.0276 0)
+				(end 1.016 -1.016)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type outline)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.016 1.016) (xy 1.016 -1.016)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 2.54 0) (xy 2.032 0)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "SolderJumper_3_Bridged12_1_1"
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "A"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.54)
+				(name "C"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "B"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 		(symbol "74xx:74HC244"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2781,17 +3314,7 @@
 		)
 		(uuid "4500fdd3-d5ce-442e-90e2-bde3745b0332")
 	)
-	(hierarchical_label "ALT_ENC_B"
-		(shape output)
-		(at 44.45 140.97 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "46743f9c-4c65-5616-bb6c-aa05fc5d6648")
-	)
+	
 	(label "ALT_DRV_PUL"
 		(at 128.27 76.2 0)
 		(effects
@@ -2844,28 +3367,8 @@
 		)
 		(uuid "62f1226e-a840-575f-8982-57741a74c299")
 	)
-	(hierarchical_label "AZ_ENC_A"
-		(shape output)
-		(at 45.72 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "67366663-8844-5f6e-bcef-3d1db9c22c64")
-	)
-	(hierarchical_label "AZ_ENC_B"
-		(shape output)
-		(at 45.72 157.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6cba631d-eae1-53f1-adef-e2935a3b3b01")
-	)
+	
+	
 	(hierarchical_label "ALT_DRV_PUL"
 		(shape output)
 		(at 172.72 81.28 180)
@@ -2920,17 +3423,7 @@
 		)
 		(uuid "a528941f-d03b-490d-8762-cde14e45eaea")
 	)
-	(hierarchical_label "ALT_ENC_A"
-		(shape output)
-		(at 44.45 138.43 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "adc84cd1-b540-5bd2-ac3a-f45bc4dbba8e")
-	)
+	
 	(hierarchical_label "AZ_PUL"
 		(shape input)
 		(at 86.36 93.98 180)
@@ -3485,85 +3978,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 45.72 160.02 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1299dfc5-4471-439a-a4a6-2cd64455c0b6")
-		(property "Reference" "#PWR0306"
-			(at 41.91 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 49.53 160.0199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 45.72 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ef5410af-75d3-4ff5-a6dd-8cc5722b7c2e")
-		)
-		(instances
-			(project "mv-telescope-hat"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
-					(reference "#PWR0306")
-					(unit 1)
-				)
-			)
-		)
-	)
+	
 	(symbol
 		(lib_id "74xx:74HC244")
 		(at 110.49 88.9 0)
@@ -5157,85 +5572,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 44.45 143.51 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9f86d1d1-d2a3-44e8-a0bd-b243fd9d2eff")
-		(property "Reference" "#PWR0304"
-			(at 40.64 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 48.26 143.5099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.45 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 44.45 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a58a641-95b7-4b29-8699-40e6bcd52c14")
-		)
-		(instances
-			(project "mv-telescope-hat"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
-					(reference "#PWR0304")
-					(unit 1)
-				)
-			)
-		)
-	)
+	
 	(symbol
 		(lib_id "power:+5V")
 		(at 113.03 53.34 270)
@@ -6749,6 +7086,1839 @@
 				)
 			)
 		)
+	)
+	(label "ALT_ENC_A_IN"
+		(at 44.45 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a1d25199-ad37-4353-97d3-e2826ef87df6")
+	)
+	(label "ALT_ENC_B_IN"
+		(at 44.45 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "98ae546c-6988-41f2-ac99-6f683187319f")
+	)
+	(label "ENC_PWR"
+		(at 44.45 143.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ab7da9bb-896a-4459-8535-33f89b9bd743")
+	)
+	(label "AZ_ENC_A_IN"
+		(at 45.72 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "305309c0-c0ae-417e-b237-b27474643006")
+	)
+	(label "AZ_ENC_B_IN"
+		(at 45.72 157.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f779c0ff-8c41-46d6-afb0-b4b7bb2f346d")
+	)
+	(label "ENC_PWR"
+		(at 45.72 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "46494fd8-64e5-4695-878a-e30263ef49bc")
+	)
+	(text "ENCODER LEVEL SHIFTER: 3.3 or 5 V encoders in, 3.3 V out"
+		(exclude_from_sim no)
+		(at 215.9 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cd55bb7b-8fe8-4ed0-9afb-2d2ad07e1b7b")
+	)
+	(text "JP301: pads 1-2 = 3.3 V encoders (default), 2-3 = 5 V"
+		(exclude_from_sim no)
+		(at 215.9 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "325b90f2-41b9-4f15-976b-7155aecd1c47")
+	)
+	(text "U302, U303: 74LVC2G17 dual Schmitt buffer, powered at 3.3 V"
+		(exclude_from_sim no)
+		(at 215.9 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1c286886-8d39-403f-9675-d433dd03f2ef")
+	)
+	(symbol
+		(lib_id "Jumper:SolderJumper_3_Bridged12")
+		(at 233.68 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "380ddbe5-471f-4207-bd73-5033c6e6d5d7")
+		(property "Reference" "JP301"
+			(at 233.68 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_3_Bridged12"
+			(at 233.68 43.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels"
+			(at 233.68 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "52708e1b-a195-47b9-a761-acef3f989e84")
+		)
+		(pin "2"
+			(uuid "ed43cb3a-bbab-4cf2-a17c-1fac038ddb96")
+		)
+		(pin "3"
+			(uuid "01ce701a-7fae-4686-9507-e4e4e53da1d9")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "JP301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 228.6 40.64) (xy 223.52 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08e7fb50-fc09-4f0d-bab2-cddd3d5accd4")
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 223.52 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2e284618-555c-4dd9-8226-5e0f009d9aa1")
+		(property "Reference" "#PWR0401"
+			(at 223.52 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 223.52 37.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "26f0d497-1dc0-4f6e-b0fa-ca6ad54693c6")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 238.76 40.64) (xy 243.84 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "396dd098-37cf-4613-b724-2e2451074caf")
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 243.84 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b7d465fd-d9b8-4e0c-aab2-1ff287247a41")
+		(property "Reference" "#PWR0402"
+			(at 243.84 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 243.84 37.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 243.84 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7d133e8-d231-4498-8fa9-c573890321ec")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 233.68 44.45) (xy 233.68 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "990a860c-46d8-4bbc-b8da-7f366e4e1fc7")
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 246.38 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eb6d85a8-a8d8-4766-86c3-f34125c044ed")
+		(property "Reference" "U302"
+			(at 245.11 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 245.11 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 246.38 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g17.pdf"
+			(at 246.38 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d52f494-3783-45b5-ba75-d484492ecb99")
+		)
+		(pin "6"
+			(uuid "e501f36e-7f41-4100-9a2b-91e869d57d03")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 220.98 63.5) (xy 231.14 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ba0acc5-80bd-4ee0-898b-9d8a4f64c239")
+	)
+	(label "ALT_ENC_A_IN"
+		(at 220.98 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e32da02e-1280-4657-9717-673d2941153a")
+	)
+	(junction
+		(at 226.06 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4899613-824c-45eb-9437-fd02c3a49f68")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 226.06 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b23cdc23-07b7-421f-b8b0-4a0f23538e7b")
+		(property "Reference" "R306"
+			(at 224.79 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 224.79 57.15 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 226.06 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1b2b30bf-38ac-488a-9836-da3cae141e35")
+		)
+		(pin "2"
+			(uuid "c5eb5cdc-13d2-43b5-b98e-33c318b3e426")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 226.06 59.69) (xy 226.06 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e535b24-5813-4a2f-ae68-0ca1e54c2e28")
+	)
+	(wire
+		(pts
+			(xy 226.06 52.07) (xy 226.06 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f78e502f-dfb5-4386-922b-2e28660e147e")
+	)
+	(wire
+		(pts
+			(xy 218.44 49.53) (xy 233.68 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69ef499e-9c7d-4254-8b56-0c51f18e37a8")
+	)
+	(junction
+		(at 226.06 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "51413290-f180-4dfa-b685-23ba48a52ee7")
+	)
+	(label "ENC_PWR"
+		(at 218.44 49.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9937c1a4-049b-469d-9b6d-6cbe8454b68d")
+	)
+	(wire
+		(pts
+			(xy 259.08 63.5) (xy 264.16 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a9be855-fb2c-4439-bea2-adb30d10639c")
+	)
+	(hierarchical_label "ALT_ENC_A"
+		(shape output)
+		(at 264.16 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7a5857c6-4216-4fe9-a68c-bb00a4a5dc80")
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 246.38 83.82 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "de9a8d50-bc2c-486e-bd3c-967603bd2f8c")
+		(property "Reference" "U302"
+			(at 245.11 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 245.11 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 246.38 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g17.pdf"
+			(at 246.38 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "d7c40ca7-0f86-46c8-9b65-5fa7a334f83b")
+		)
+		(pin "4"
+			(uuid "5b4ddc50-59ed-4e1a-99be-5816e89f7476")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U302")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 220.98 83.82) (xy 231.14 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c5ad5bb-e1da-48b0-8b58-e50d9da9f1cb")
+	)
+	(label "ALT_ENC_B_IN"
+		(at 220.98 83.82 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6229a605-ff81-4990-8b63-f2fb01cd0c96")
+	)
+	(junction
+		(at 226.06 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b056f906-a5de-4c2a-8036-0e98c56f22e9")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 226.06 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bbe4bae3-01d2-4449-ab66-0bfa9a41445b")
+		(property "Reference" "R307"
+			(at 224.79 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 224.79 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 226.06 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "759d0e97-3c38-4eb1-ba82-e293d6b1bf7f")
+		)
+		(pin "2"
+			(uuid "949f298d-a059-46e8-985b-d38929ce91bf")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R307")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 226.06 80.01) (xy 226.06 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7eeaadb-356a-4e66-bc5a-2126d7ba309f")
+	)
+	(wire
+		(pts
+			(xy 226.06 72.39) (xy 226.06 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5958785-a83f-46f9-bb10-4a53321fd35e")
+	)
+	(label "ENC_PWR"
+		(at 226.06 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fe1fcd35-e24c-4610-9470-20e63ed36124")
+	)
+	(wire
+		(pts
+			(xy 259.08 83.82) (xy 264.16 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f37192b-7532-4765-a5f2-2b4a83f30f56")
+	)
+	(hierarchical_label "ALT_ENC_B"
+		(shape output)
+		(at 264.16 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5948d075-d19a-416a-a2e4-6d65de730ed5")
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 246.38 104.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "48c6d48b-8e13-4a2c-98f5-1eff03553ded")
+		(property "Reference" "U303"
+			(at 245.11 96.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 245.11 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 246.38 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g17.pdf"
+			(at 246.38 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c34079c-ffbd-4899-a66c-97b958720b80")
+		)
+		(pin "6"
+			(uuid "d5d81cd0-9c10-4226-93ff-67edf4aa132b")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 220.98 104.14) (xy 231.14 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62c3bd4c-a547-40a0-b274-5e2d893cdded")
+	)
+	(label "AZ_ENC_A_IN"
+		(at 220.98 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "833a202d-a3c2-4b2a-9a82-080ea44f6f76")
+	)
+	(junction
+		(at 226.06 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ebd453d1-973c-46ed-aa2a-89be8c311863")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 226.06 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "530bf8db-8b0d-4d6a-883f-4115de617584")
+		(property "Reference" "R308"
+			(at 224.79 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 224.79 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 226.06 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7ab67f56-d0f8-44ea-b173-921486047763")
+		)
+		(pin "2"
+			(uuid "4dee3dd0-1644-4a37-ac5a-f0060ebbacd4")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R308")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 226.06 100.33) (xy 226.06 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fcaf84a-c8de-4eae-a626-23b37bd2f1e6")
+	)
+	(wire
+		(pts
+			(xy 226.06 92.71) (xy 226.06 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "140f7a85-63de-488a-b286-ba17d9964f5e")
+	)
+	(label "ENC_PWR"
+		(at 226.06 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "78283e1a-7687-40f2-8dc1-074e2c3044fb")
+	)
+	(wire
+		(pts
+			(xy 259.08 104.14) (xy 264.16 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e06d5053-ea29-4dd2-8fdd-49e76772867c")
+	)
+	(hierarchical_label "AZ_ENC_A"
+		(shape output)
+		(at 264.16 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2c26e14f-2f50-4d1e-939f-419c67ef6708")
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 246.38 124.46 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "811928ed-b9e5-4190-897a-ce89b5601b7a")
+		(property "Reference" "U303"
+			(at 245.11 116.84 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 245.11 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 246.38 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g17.pdf"
+			(at 246.38 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "cfa161ee-302b-4414-84fe-8731438defd2")
+		)
+		(pin "4"
+			(uuid "6b14214e-7455-4b5a-816e-c90cb0052ce0")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U303")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 220.98 124.46) (xy 231.14 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "316713ff-cdf9-4e63-9ab9-aca9fd1f2a8c")
+	)
+	(label "AZ_ENC_B_IN"
+		(at 220.98 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1b9b018e-368f-4e3d-b69a-e25eeccdb5ca")
+	)
+	(junction
+		(at 226.06 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5e6f90f4-bae6-44d6-aecb-7ef802f1ab09")
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 226.06 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "da81a74e-f69e-4464-ad02-6b7dfe7ad80b")
+		(property "Reference" "R309"
+			(at 224.79 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 224.79 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 226.06 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1c53a246-fdb3-4ba0-b332-0d3bc53683e5")
+		)
+		(pin "2"
+			(uuid "becea14f-b3db-4596-b312-61e75016d6b9")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "R309")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 226.06 120.65) (xy 226.06 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eee6d73b-6050-4a36-be3b-8479d39e8ca5")
+	)
+	(wire
+		(pts
+			(xy 226.06 113.03) (xy 226.06 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea319865-38ec-41c7-a534-bbe7da17a669")
+	)
+	(label "ENC_PWR"
+		(at 226.06 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b7489934-73e2-459a-8723-0c5e75b225f3")
+	)
+	(wire
+		(pts
+			(xy 259.08 124.46) (xy 264.16 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a9cc667-15cc-4452-bec0-8e14e5ff6baf")
+	)
+	(hierarchical_label "AZ_ENC_B"
+		(shape output)
+		(at 264.16 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "48fe7169-a730-45db-b864-a1eff4119b13")
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 233.68 146.05 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "65badf21-27c5-43af-8636-4fa2b8c963c0")
+		(property "Reference" "U302"
+			(at 227.33 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 233.68 149.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 233.68 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g17.pdf"
+			(at 233.68 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ff26bd58-abe4-4890-8966-8ec7760e3eda")
+		)
+		(pin "5"
+			(uuid "97e85398-d952-4f4b-8c37-bac6d7468a19")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U302")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 233.68 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d8595d7f-be16-47c5-8a99-490bcdad62c9")
+		(property "Reference" "#PWR0403"
+			(at 233.68 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 233.68 132.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a64aa9c9-d199-491c-832b-90715d97eaae")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0403")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 233.68 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "934514c4-e222-4a38-8918-5975b002b073")
+		(property "Reference" "#PWR0404"
+			(at 233.68 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 233.68 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "420279dd-8b2e-4d55-a5cc-983cc19fa799")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0404")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 241.3 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6dad4824-794a-4fc3-be30-c57f442a79ad")
+		(property "Reference" "C306"
+			(at 243.21 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 243.21 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 241.3 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "05f6fdcd-b24d-4f10-a408-75fef079e7cf")
+		)
+		(pin "2"
+			(uuid "9374c8fa-fb75-4db9-97e2-4dace93f399d")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 233.68 135.89) (xy 241.3 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26a3b595-2559-498a-b636-c44309490f98")
+	)
+	(wire
+		(pts
+			(xy 241.3 135.89) (xy 241.3 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf5a19a9-877f-42f4-ba25-d065fbf50eee")
+	)
+	(wire
+		(pts
+			(xy 241.3 149.86) (xy 241.3 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ef39426-dec1-4222-8fc1-96982f8d627c")
+	)
+	(wire
+		(pts
+			(xy 241.3 156.21) (xy 233.68 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f42e453e-e9f5-4917-a160-b47f0204a9ec")
+	)
+	(symbol
+		(lib_id "74xGxx:74LVC2G17")
+		(at 264.16 146.05 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fb5ad5aa-81f8-470a-a8f5-22dfa06568df")
+		(property "Reference" "U303"
+			(at 257.81 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "74LVC2G17"
+			(at 264.16 149.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 264.16 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc2g17.pdf"
+			(at 264.16 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e624f2ea-d3bb-441e-8fd4-a1465503be6c")
+		)
+		(pin "5"
+			(uuid "6846f776-ea89-487d-85b3-bc5a63c40ec7")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "U303")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 264.16 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bb02fb52-6ae6-4212-a12c-59d9385b97e7")
+		(property "Reference" "#PWR0405"
+			(at 264.16 139.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 264.16 132.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7f22c071-1ccc-4290-adc5-ffd1f18bf9ef")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0405")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73bb0c89-b6a4-41f3-ac88-25ec86346b47")
+		(property "Reference" "#PWR0406"
+			(at 264.16 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 160.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bbdc9a7-893a-475b-8e06-3df5300e4a09")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "#PWR0406")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 271.78 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9aef418c-9a07-43c7-8c31-bf0bc0fb27da")
+		(property "Reference" "C307"
+			(at 273.69 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 273.69 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 271.78 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d0fa915-e00f-4612-ae5f-62041b992df0")
+		)
+		(pin "2"
+			(uuid "0ae29c7e-f416-4e68-8826-8d3c9053b180")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/cd8c5009-5c87-57e7-8895-17531f23ebe5"
+					(reference "C307")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 264.16 135.89) (xy 271.78 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f887cf9-64ac-4e18-bad1-9a5fe61b538c")
+	)
+	(wire
+		(pts
+			(xy 271.78 135.89) (xy 271.78 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f645819-3b29-4a3a-8721-d3c2300b7f4d")
+	)
+	(wire
+		(pts
+			(xy 271.78 149.86) (xy 271.78 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffb3a71e-37db-4a77-afae-d5382fe080f3")
+	)
+	(wire
+		(pts
+			(xy 271.78 156.21) (xy 264.16 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f00c30f1-aff5-442d-81f7-9386d865dfa4")
 	)
 	(sheet_instances
 		(path "/"
