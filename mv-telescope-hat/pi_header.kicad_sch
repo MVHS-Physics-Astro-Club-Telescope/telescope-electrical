@@ -14,221 +14,221 @@
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x04"
-				(pin_names
-					(offset 1.016)
-					(hide yes)
-				)
-				(exclude_from_sim no)
-				(in_bom yes)
-				(on_board yes)
-				(in_pos_files yes)
-				(duplicate_pin_numbers_are_jumpers no)
-				(property "Reference" "J"
-					(at 0 5.08 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Value" "Conn_01x04"
-					(at 0 -7.62 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Footprint" ""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Datasheet" ""
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "ki_keywords" "connector"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(property "ki_fp_filters" "Connector*:*_1x??_*"
-					(at 0 0 0)
-					(show_name no)
-					(do_not_autoplace no)
-					(hide yes)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(symbol "Conn_01x04_1_1"
-					(rectangle
-						(start -1.27 3.81)
-						(end 1.27 -6.35)
-						(stroke
-							(width 0.254)
-							(type default)
-						)
-						(fill
-							(type background)
-						)
-					)
-					(rectangle
-						(start -1.27 2.667)
-						(end 0 2.413)
-						(stroke
-							(width 0.1524)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(rectangle
-						(start -1.27 0.127)
-						(end 0 -0.127)
-						(stroke
-							(width 0.1524)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(rectangle
-						(start -1.27 -2.413)
-						(end 0 -2.667)
-						(stroke
-							(width 0.1524)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(rectangle
-						(start -1.27 -4.953)
-						(end 0 -5.207)
-						(stroke
-							(width 0.1524)
-							(type default)
-						)
-						(fill
-							(type none)
-						)
-					)
-					(pin passive line
-						(at -5.08 2.54 0)
-						(length 3.81)
-						(name "Pin_1"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "1"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-					(pin passive line
-						(at -5.08 0 0)
-						(length 3.81)
-						(name "Pin_2"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "2"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-					(pin passive line
-						(at -5.08 -2.54 0)
-						(length 3.81)
-						(name "Pin_3"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "3"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-					(pin passive line
-						(at -5.08 -5.08 0)
-						(length 3.81)
-						(name "Pin_4"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-						(number "4"
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
-					)
-				)
-				(embedded_fonts no)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
 			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_02x20_Odd_Even"
 			(pin_names
 				(offset 1.016)
@@ -1998,6 +1998,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "J201: I2C cable to the INA260 current sensor (A401 on the power sheet).\nWire it by name: 3V3, SDA, SCL, GND. Keep it short: I2C is meant for short runs."
+		(exclude_from_sim no)
+		(at 78.74 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2f95a17d-a39d-589b-bbe9-2396ef84d89a")
+	)
 	(text "PIN MAP v1.1, 2026-11-22 (Raspberry Pi 4, BCM GPIO numbers, J1 = 40-pin header)\n\nDRIVER SIGNALS: Pi GPIO → 74ACT244 → DM542T minus pins (common anode)\nALT_PUL  GPIO12  pin 32  →  1A1 (2) / 1Y1 (18)  →  ALT PUL−   [hardware PWM0]\nALT_DIR  GPIO16  pin 36  →  1A2 (4) / 1Y2 (16)  →  ALT DIR−\nALT_ENA  GPIO5   pin 29  →  1A3 (6) / 1Y3 (14)  →  ALT ENA−\nAZ_PUL   GPIO13  pin 33  →  2A1 (11) / 2Y1 (9)  →  AZ PUL−   [hardware PWM1]\nAZ_DIR   GPIO26  pin 37  →  2A2 (13) / 2Y2 (7)  →  AZ DIR−\nAZ_ENA   GPIO6   pin 31  →  2A3 (15) / 2Y3 (5)  →  AZ ENA−\nBUF_OE_N GPIO4   pin 7   →  1OE (1) + 2OE (19), 10k pull-up to +3V3\nUnused 244 inputs 1A4 (8), 2A4 (17) → GND.  VCC (20) = +5V with 100n to GND (10).\n+5V → PUL+, DIR+, ENA+ of both drivers (same +5V as the 244). DM542T logic selector → 5V (ships at 24V).\n\nLIMIT SWITCHES: NC contact between net and GND, 10k pull-up to +3V3, 100n to GND\nALT_LIM_LOW  GPIO17 pin 11   |   ALT_LIM_HIGH  GPIO27 pin 13\nAZ_LIM_CW    GPIO22 pin 15   |   AZ_LIM_CCW    GPIO23 pin 16\nReads LOW normally. HIGH = switch hit OR wire broken → software stops that axis.\n\nENCODERS (none bought yet, spots only): 3.3V max into the Pi\nALT_ENC_A  GPIO24 pin 18   |   ALT_ENC_B  GPIO25 pin 22\nAZ_ENC_A   GPIO20 pin 38   |   AZ_ENC_B   GPIO21 pin 40\n\nSOFTWARE LOGIC (common anode flips it: GPIO LOW = optocoupler ON)\nPUL: idle HIGH. A step happens on HIGH → LOW. Low ≥ 2.5 µs, high ≥ 2.5 µs (200 kHz max).\nDIR: set ≥ 5 µs before the step edge. Which level is clockwise gets set at the bench test.\nENA: HIGH = driver ON, holding torque (same as ENA unwired). LOW = driver OFF, motor turns by hand.\nBUF_OE_N: HIGH (boot default, pulled up) = 244 outputs off: drivers ON and holding, no steps.\n    Software sets PUL HIGH, ENA, DIR first, then drives BUF_OE_N LOW.\n\nI2C: INA260 current sensor  I2C_SDA GPIO2 pin 3  |  I2C_SCL GPIO3 pin 5  → J201 and the power sheet. 1.8k pull-ups on the Pi. Address 0x40.\n\nLEFT FREE (X on J1): pins 27/28 ID EEPROM only (HAT spec). GPIO14/15 UART for serial console / GPS. GPIO7-11 SPI0 for SPI absolute encoders.\nSPARE: GPIO18 (pin 12), GPIO19 (pin 35)."
 		(exclude_from_sim no)
 		(at 118.11 22.86 0)
@@ -2185,6 +2196,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 30.48) (xy 31.75 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d18777c-24f3-55f6-b9b5-c3249d68ff7b")
+	)
+	(wire
+		(pts
 			(xy 58.42 101.6) (xy 68.58 101.6)
 		)
 		(stroke
@@ -2265,6 +2286,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 129.54) (xy 45.72 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e25edb0-a850-5af8-bb50-1cae1ef0b8f5")
+	)
+	(wire
+		(pts
 			(xy 55.88 48.26) (xy 60.96 48.26)
 		)
 		(stroke
@@ -2312,6 +2343,16 @@
 			(type solid)
 		)
 		(uuid "7dd33798-d6eb-48c4-8355-bbeae3353a44")
+	)
+	(wire
+		(pts
+			(xy 50.8 121.92) (xy 45.72 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8222f27e-c00a-5797-81d4-e14857c0d77b")
 	)
 	(wire
 		(pts
@@ -2372,6 +2413,26 @@
 			(type solid)
 		)
 		(uuid "9705171e-2fe8-4d02-a114-94335e138862")
+	)
+	(wire
+		(pts
+			(xy 60.96 33.02) (xy 31.75 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d3228d4-0355-5ba6-b1e7-45742def3c3e")
+	)
+	(wire
+		(pts
+			(xy 50.8 129.54) (xy 45.72 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4ab3c8f-e196-5e32-8d3f-fc1044e1b111")
 	)
 	(wire
 		(pts
@@ -2475,6 +2536,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 121.92) (xy 45.72 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd0f988c-6df4-5761-aa16-d98cb8a646fa")
+	)
+	(wire
+		(pts
 			(xy 76.2 68.58) (xy 76.2 80.01)
 		)
 		(stroke
@@ -2522,6 +2593,26 @@
 			(type solid)
 		)
 		(uuid "ed4af6f5-c1f9-4ac6-b35e-2b9ff5cd0eb3")
+	)
+	(wire
+		(pts
+			(xy 50.8 127) (xy 35.56 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1b25cd4-b027-5c54-8cc5-4a1decd91a57")
+	)
+	(wire
+		(pts
+			(xy 50.8 124.46) (xy 35.56 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f475ac37-db15-527b-a15d-4e8c9c120a84")
 	)
 	(hierarchical_label "AZ_ENA"
 		(shape output)
@@ -2666,6 +2757,17 @@
 		)
 		(uuid "a46d6ef9-bb48-47fb-afed-157a64315177")
 	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 35.56 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a483ea61-e139-576a-9d86-52cd896ff20f")
+	)
 	(hierarchical_label "ALT_PUL"
 		(shape output)
 		(at 100.33 66.04 0)
@@ -2676,6 +2778,17 @@
 			(justify left)
 		)
 		(uuid "a9ed66d3-a7fc-4839-b265-b9a21ee7fc85")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape output)
+		(at 35.56 127 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ae08e97c-6708-502e-b009-733f901e82f5")
 	)
 	(hierarchical_label "AZ_PUL"
 		(shape output)
@@ -2699,6 +2812,17 @@
 		)
 		(uuid "b64a2cd2-1bcf-4d65-ac61-508537c93d3e")
 	)
+	(hierarchical_label "I2C_SDA"
+		(shape bidirectional)
+		(at 31.75 30.48 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b671fcc3-df17-534c-b862-a9569c5a2ef0")
+	)
 	(hierarchical_label "ALT_ENC_A"
 		(shape input)
 		(at 100.33 48.26 0)
@@ -2709,6 +2833,17 @@
 			(justify left)
 		)
 		(uuid "b8e48041-ff05-4814-a4a3-fb04f84542aa")
+	)
+	(hierarchical_label "I2C_SCL"
+		(shape output)
+		(at 31.75 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c51c4372-cd06-545f-b022-bf27f8fd19ff")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -3280,6 +3415,93 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 55.88 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "33d8a906-7700-54f3-9cf0-d393c81037b2")
+		(property "Reference" "J201"
+			(at 58.42 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "INA260 I2C"
+			(at 58.42 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 55.88 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "I2C cable to the INA260 current sensor (A401, power sheet): 1 3V3, 2 SDA, 3 SCL, 4 GND"
+			(at 55.88 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "319ca183-6567-50f5-a808-a2c6502bc489")
+		)
+		(pin "2"
+			(uuid "4a5a2b94-0926-5fd3-a1ae-9a78f14e6fce")
+		)
+		(pin "3"
+			(uuid "a228579c-7737-5181-b4ec-4ac6c42e739f")
+		)
+		(pin "4"
+			(uuid "af651f73-8ce7-527b-a0de-6ba747cb6f54")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/82e8228b-8035-5ba1-9d1c-f5fda53854cf"
+					(reference "J201")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 81.28 101.6 0)
 		(unit 1)
@@ -3350,6 +3572,83 @@
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/82e8228b-8035-5ba1-9d1c-f5fda53854cf"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 45.72 132.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "38752083-864c-5668-a6f8-577c7d768994")
+		(property "Reference" "#PWR0202"
+			(at 45.72 127.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 45.72 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "165c0cac-c5e7-5cc7-adfe-c1f941932087")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/82e8228b-8035-5ba1-9d1c-f5fda53854cf"
+					(reference "#PWR0202")
 					(unit 1)
 				)
 			)
@@ -3659,155 +3958,6 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 60.96 30.48) (xy 31.75 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d18777c-24f3-55f6-b9b5-c3249d68ff7b")
-	)
-	(hierarchical_label "I2C_SDA"
-		(shape bidirectional)
-		(at 31.75 30.48 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b671fcc3-df17-534c-b862-a9569c5a2ef0")
-	)
-	(wire
-		(pts
-			(xy 60.96 33.02) (xy 31.75 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d3228d4-0355-5ba6-b1e7-45742def3c3e")
-	)
-	(hierarchical_label "I2C_SCL"
-		(shape output)
-		(at 31.75 33.02 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c51c4372-cd06-545f-b022-bf27f8fd19ff")
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 55.88 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "33d8a906-7700-54f3-9cf0-d393c81037b2")
-		(property "Reference" "J201"
-			(at 58.42 123.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "INA260 I2C"
-			(at 58.42 125.73 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 55.88 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 55.88 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "I2C cable to the INA260 current sensor (A401, power sheet): 1 3V3, 2 SDA, 3 SCL, 4 GND"
-			(at 55.88 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "319ca183-6567-50f5-a808-a2c6502bc489")
-		)
-		(pin "2"
-			(uuid "4a5a2b94-0926-5fd3-a1ae-9a78f14e6fce")
-		)
-		(pin "3"
-			(uuid "a228579c-7737-5181-b4ec-4ac6c42e739f")
-		)
-		(pin "4"
-			(uuid "af651f73-8ce7-527b-a0de-6ba747cb6f54")
-		)
-		(instances
-			(project "mv-telescope-hat"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/82e8228b-8035-5ba1-9d1c-f5fda53854cf"
-					(reference "J201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 50.8 121.92) (xy 45.72 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8222f27e-c00a-5797-81d4-e14857c0d77b")
-	)
-	(wire
-		(pts
-			(xy 45.72 121.92) (xy 45.72 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd0f988c-6df4-5761-aa16-d98cb8a646fa")
-	)
 	(symbol
 		(lib_id "power:+3.3V")
 		(at 45.72 119.38 0)
@@ -3884,155 +4034,5 @@
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 50.8 124.46) (xy 35.56 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f475ac37-db15-527b-a15d-4e8c9c120a84")
-	)
-	(hierarchical_label "I2C_SDA"
-		(shape bidirectional)
-		(at 35.56 124.46 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a483ea61-e139-576a-9d86-52cd896ff20f")
-	)
-	(wire
-		(pts
-			(xy 50.8 127.0) (xy 35.56 127.0)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f1b25cd4-b027-5c54-8cc5-4a1decd91a57")
-	)
-	(hierarchical_label "I2C_SCL"
-		(shape output)
-		(at 35.56 127.0 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ae08e97c-6708-502e-b009-733f901e82f5")
-	)
-	(wire
-		(pts
-			(xy 50.8 129.54) (xy 45.72 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4ab3c8f-e196-5e32-8d3f-fc1044e1b111")
-	)
-	(wire
-		(pts
-			(xy 45.72 129.54) (xy 45.72 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e25edb0-a850-5af8-bb50-1cae1ef0b8f5")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 132.08 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "38752083-864c-5668-a6f8-577c7d768994")
-		(property "Reference" "#PWR0202"
-			(at 45.72 127.08000000000001 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 135.89 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "165c0cac-c5e7-5cc7-adfe-c1f941932087")
-		)
-		(instances
-			(project "mv-telescope-hat"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/82e8228b-8035-5ba1-9d1c-f5fda53854cf"
-					(reference "#PWR0202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "J201: I2C cable to the INA260 current sensor (A401 on the power sheet).\nWire it by name: 3V3, SDA, SCL, GND. Keep it short: I2C is meant for short runs."
-		(exclude_from_sim no)
-		(at 78.74 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "2f95a17d-a39d-589b-bbe9-2396ef84d89a")
 	)
 )

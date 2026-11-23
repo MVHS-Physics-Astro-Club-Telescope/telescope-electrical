@@ -2593,7 +2593,6 @@
 		)
 		(uuid "e7e854db-c312-4b52-b9f0-4b43c9e5eb84")
 	)
-
 	(wire
 		(pts
 			(xy 72.39 140.97) (xy 93.98 140.97)
@@ -2694,6 +2693,66 @@
 		)
 		(uuid "ffee37a0-9c30-4b72-aacc-6bf5ccf4826d")
 	)
+	(label "ALT_DRV_ENA"
+		(at 128.27 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fb1d1e0-6c32-4e76-9c9b-29355b2ee138")
+	)
+	(label "ALT_DRV_PUL"
+		(at 128.27 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51227aa9-9c14-4556-836b-f070557dcc5c")
+	)
+	(label "AZ_DRV_PUL"
+		(at 128.27 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53dfa504-2d09-4844-9852-64f394918c37")
+	)
+	(label "ALT_DRV_DIR"
+		(at 128.27 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b04e5dd-fede-4431-92a2-65bb772dd6bb")
+	)
+	(label "AZ_DRV_ENA"
+		(at 128.27 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b5427dd-406f-4184-abdf-50a9b63ad1e5")
+	)
+	(label "AZ_DRV_DIR"
+		(at 128.27 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0133130-6aa4-4d7e-a1f0-b338d92fe159")
+	)
 	(hierarchical_label "ALT_ENA"
 		(shape input)
 		(at 86.36 81.28 180)
@@ -2726,16 +2785,6 @@
 			(justify right)
 		)
 		(uuid "169d1215-eeff-4d40-a609-a4cf2c964aba")
-	)
-	(label "ALT_DRV_ENA"
-		(at 128.27 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1fb1d1e0-6c32-4e76-9c9b-29355b2ee138")
 	)
 	(hierarchical_label "ALT_DIR"
 		(shape input)
@@ -2792,26 +2841,6 @@
 		)
 		(uuid "46743f9c-4c65-5616-bb6c-aa05fc5d6648")
 	)
-	(label "ALT_DRV_PUL"
-		(at 128.27 76.2 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "51227aa9-9c14-4556-836b-f070557dcc5c")
-	)
-	(label "AZ_DRV_PUL"
-		(at 128.27 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "53dfa504-2d09-4844-9852-64f394918c37")
-	)
 	(hierarchical_label "ALT_LIM_HIGH"
 		(shape output)
 		(at 96.52 166.37 0)
@@ -2822,16 +2851,6 @@
 			(justify left)
 		)
 		(uuid "56786678-f09a-5c51-bba2-09e361033916")
-	)
-	(label "ALT_DRV_DIR"
-		(at 128.27 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5b04e5dd-fede-4431-92a2-65bb772dd6bb")
 	)
 	(hierarchical_label "BUF_OE_N"
 		(shape input)
@@ -2876,16 +2895,6 @@
 			(justify right)
 		)
 		(uuid "7286d977-b26c-4392-8ec9-cb0203986069")
-	)
-	(label "AZ_DRV_ENA"
-		(at 128.27 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7b5427dd-406f-4184-abdf-50a9b63ad1e5")
 	)
 	(hierarchical_label "AZ_LIM_CCW"
 		(shape output)
@@ -2996,16 +3005,6 @@
 			(justify left)
 		)
 		(uuid "d81991f8-3a9b-5ae5-83de-16bd1f75e6dd")
-	)
-	(label "AZ_DRV_DIR"
-		(at 128.27 91.44 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f0133130-6aa4-4d7e-a1f0-b338d92fe159")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -6755,5 +6754,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )
