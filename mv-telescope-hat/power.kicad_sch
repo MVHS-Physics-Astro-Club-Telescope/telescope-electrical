@@ -1058,7 +1058,7 @@
 				(in_bom yes)
 				(on_board yes)
 				(property "Reference" "A"
-					(at 0 10.16 0)
+					(at 0 27.94 0)
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1066,7 +1066,7 @@
 					)
 				)
 				(property "Value" "PPBA_Gen2"
-					(at 0 -10.16 0)
+					(at 0 -27.94 0)
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1102,8 +1102,8 @@
 				)
 				(symbol "PPBA_Gen2_0_1"
 					(rectangle
-						(start -12.7 8.89)
-						(end 12.7 -8.89)
+						(start -12.7 26.67)
+						(end 12.7 -26.67)
 						(stroke
 							(width 0.254)
 							(type default)
@@ -1115,7 +1115,7 @@
 				)
 				(symbol "PPBA_Gen2_1_1"
 					(pin passive line
-						(at -15.24 6.35 0)
+						(at -15.24 24.13 0)
 						(length 2.54)
 						(name "IN+"
 							(effects
@@ -1133,7 +1133,7 @@
 						)
 					)
 					(pin passive line
-						(at -15.24 3.81 0)
+						(at -15.24 21.59 0)
 						(length 2.54)
 						(name "IN-"
 							(effects
@@ -1151,7 +1151,7 @@
 						)
 					)
 					(pin power_out line
-						(at 15.24 6.35 180)
+						(at 15.24 24.13 180)
 						(length 2.54)
 						(name "USB1_5V"
 							(effects
@@ -1169,7 +1169,7 @@
 						)
 					)
 					(pin passive line
-						(at 15.24 3.81 180)
+						(at 15.24 21.59 180)
 						(length 2.54)
 						(name "USB1_GND"
 							(effects
@@ -1187,7 +1187,7 @@
 						)
 					)
 					(pin passive line
-						(at 15.24 -3.81 180)
+						(at 15.24 8.89 180)
 						(length 2.54)
 						(name "OUT1+"
 							(effects
@@ -1205,7 +1205,7 @@
 						)
 					)
 					(pin passive line
-						(at 15.24 -6.35 180)
+						(at 15.24 6.35 180)
 						(length 2.54)
 						(name "OUT1-"
 							(effects
@@ -1215,6 +1215,114 @@
 							)
 						)
 						(number "6"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin power_out line
+						(at 15.24 -1.27 180)
+						(length 2.54)
+						(name "USB2_5V"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "7"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 15.24 -3.81 180)
+						(length 2.54)
+						(name "USB2_GND"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "8"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin power_out line
+						(at 15.24 -11.43 180)
+						(length 2.54)
+						(name "USB4_5V"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "9"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 15.24 -13.97 180)
+						(length 2.54)
+						(name "USB4_GND"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "10"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 15.24 -21.59 180)
+						(length 2.54)
+						(name "DEW_A+"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "11"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 15.24 -24.13 180)
+						(length 2.54)
+						(name "DEW_A-"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "12"
 							(effects
 								(font
 									(size 1.27 1.27)
@@ -1607,6 +1715,212 @@
 						(at -10.16 -1.27 0)
 						(length 2.54)
 						(name "12V-"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
+		(symbol "MV:USB_Device"
+				(pin_numbers
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(property "Reference" "A"
+					(at 0 5.08 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "USB_Device"
+					(at 0 -5.08 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "Device powered from a USB port: 5 V in on the USB cable"
+					(at 0 0 0)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "USB_Device_0_1"
+					(rectangle
+						(start -7.62 3.81)
+						(end 7.62 -3.81)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type background)
+						)
+					)
+				)
+				(symbol "USB_Device_1_1"
+					(pin power_in line
+						(at -10.16 1.27 0)
+						(length 2.54)
+						(name "5V"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at -10.16 -1.27 0)
+						(length 2.54)
+						(name "GND"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
+		(symbol "MV:Dew_Heater"
+				(pin_numbers
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(property "Reference" "A"
+					(at 0 5.08 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "Dew_Heater"
+					(at 0 -5.08 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" "Dew heater strip on a PPBA dew port: 12-13.8 V PWM, up to 5 A per port"
+					(at 0 0 0)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "Dew_Heater_0_1"
+					(rectangle
+						(start -7.62 3.81)
+						(end 7.62 -3.81)
+						(stroke
+							(width 0.254)
+							(type default)
+						)
+						(fill
+							(type background)
+						)
+					)
+				)
+				(symbol "Dew_Heater_1_1"
+					(pin passive line
+						(at -10.16 1.27 0)
+						(length 2.54)
+						(name "PWM+"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at -10.16 -1.27 0)
+						(length 2.54)
+						(name "PWM-"
 							(effects
 								(font
 									(size 1.27 1.27)
@@ -3348,13 +3662,13 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 50.8) (xy 134.62 86.36)
+			(xy 134.62 50.8) (xy 134.62 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "98a07217-2470-5ac1-b763-69ca5680c0c2")
+		(uuid "f8836331-a81f-5a64-b2e4-8cada8985b05")
 	)
 	(junction
 		(at 134.62 50.8)
@@ -3443,7 +3757,7 @@
 	)
 	(symbol
 		(lib_id "Device:Fuse")
-		(at 142.24 86.36 90)
+		(at 142.24 96.52 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3453,7 +3767,7 @@
 		(dnp no)
 		(uuid "207b7dee-30ed-5330-9872-4ea86d870c61")
 		(property "Reference" "F403"
-			(at 142.24 83.185 90)
+			(at 142.24 93.345 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3463,7 +3777,7 @@
 			)
 		)
 		(property "Value" "10A"
-			(at 142.24 88.9 90)
+			(at 142.24 99.06 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3473,7 +3787,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 86.36 0)
+			(at 142.24 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3484,7 +3798,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 86.36 0)
+			(at 142.24 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3495,7 +3809,7 @@
 			)
 		)
 		(property "Description" "10 A ATC blade, WUPP 6-way fuse block circuit 2"
-			(at 142.24 86.36 0)
+			(at 142.24 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3532,17 +3846,17 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 86.36) (xy 138.43 86.36)
+			(xy 134.62 96.52) (xy 138.43 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9d2da444-73fa-53a7-be4f-f73f28ee1b1e")
+		(uuid "2d2c519f-b464-5153-b7a9-bb3a54e9451c")
 	)
 	(rectangle
 		(start 130.81 29.21)
-		(end 148.59 92.71)
+		(end 148.59 102.87)
 		(stroke
 			(width 0)
 			(type dash)
@@ -3550,7 +3864,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "8db70c89-ef10-5102-82f0-2e26d0e3355f")
+		(uuid "bd4ae8eb-20f2-554b-96fb-c152ac522aa5")
 	)
 	(text "WUPP 6-way fuse block (2 of 6 circuits used)"
 		(exclude_from_sim no)
@@ -3565,7 +3879,7 @@
 	)
 	(symbol
 		(lib_id "MV:PPBA_Gen2")
-		(at 182.88 41.91 0)
+		(at 182.88 59.69 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3585,7 +3899,7 @@
 			)
 		)
 		(property "Value" "Pegasus PPBA Gen2"
-			(at 182.88 52.07 0)
+			(at 182.88 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3595,7 +3909,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 182.88 41.91 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3606,7 +3920,7 @@
 			)
 		)
 		(property "Datasheet" "https://pegasusastro.com/wp-content/uploads/2024/12/PPBADV_manual_v1.5.pdf"
-			(at 182.88 41.91 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3617,7 +3931,7 @@
 			)
 		)
 		(property "Description" "Pegasus Astro Pocket Powerbox Advance Gen2 (donated, on hand)"
-			(at 182.88 41.91 0)
+			(at 182.88 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3644,6 +3958,24 @@
 		)
 		(pin "6"
 			(uuid "62f5d87c-50c7-5f79-b881-6501e9f54af4")
+		)
+		(pin "7"
+			(uuid "e45a1a04-75b6-545d-b2f8-1906801a70ee")
+		)
+		(pin "8"
+			(uuid "cc16b58a-b072-5360-b203-dc34ca24d3a3")
+		)
+		(pin "9"
+			(uuid "485659fe-94c5-5eee-90be-4c7fc0a7086d")
+		)
+		(pin "10"
+			(uuid "e14392cd-9937-5fc5-92a1-54c0f1037311")
+		)
+		(pin "11"
+			(uuid "5cf5dc02-5c85-5042-88ec-07da7577de63")
+		)
+		(pin "12"
+			(uuid "b06ed7f3-a69f-5389-974b-c46640694280")
 		)
 		(instances
 			(project "mv-telescope-hat"
@@ -4286,7 +4618,7 @@
 	)
 	(symbol
 		(lib_id "MV:Camera_12V")
-		(at 233.68 57.15 0)
+		(at 233.68 52.07 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4296,27 +4628,29 @@
 		(dnp no)
 		(uuid "f9d7c65b-878b-5628-a8b1-286616762c3d")
 		(property "Reference" "A406"
-			(at 233.68 52.07 0)
+			(at 243.84 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Value" "ATR585C main camera"
-			(at 233.68 62.23 0)
+			(at 243.84 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 57.15 0)
+			(at 233.68 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4327,7 +4661,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 57.15 0)
+			(at 233.68 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4337,8 +4671,8 @@
 				)
 			)
 		)
-		(property "Description" "Main camera, 12 V 3 A from PPBA 12 V out 1 (USB does not power it)"
-			(at 233.68 57.15 0)
+		(property "Description" "Main camera, 12 V 3 A from PPBA 12 V out 1 (USB does not power it; its USB3 cable is data only, to hub port 3)"
+			(at 233.68 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4365,83 +4699,53 @@
 	)
 	(wire
 		(pts
-			(xy 198.12 45.72) (xy 208.28 45.72)
+			(xy 198.12 50.8) (xy 223.52 50.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "710c089e-a030-5ff7-b244-15d60724e051")
+		(uuid "af629165-29e7-5965-990f-f19c2a5674bf")
 	)
 	(wire
 		(pts
-			(xy 208.28 45.72) (xy 208.28 55.88)
+			(xy 198.12 53.34) (xy 205.74 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5848b33d-2a67-58ed-bb24-9f3383baddc7")
+		(uuid "f873dd4e-8d67-5bb4-986b-d214f1be6116")
 	)
 	(wire
 		(pts
-			(xy 208.28 55.88) (xy 223.52 55.88)
+			(xy 205.74 53.34) (xy 223.52 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c25e5af0-fddf-508f-991b-520239bc31ca")
-	)
-	(wire
-		(pts
-			(xy 198.12 48.26) (xy 203.2 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "40da5bfc-dc66-5a40-a999-88511c281387")
-	)
-	(wire
-		(pts
-			(xy 203.2 48.26) (xy 203.2 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2491823c-3451-582c-a7cb-157564e4a22b")
-	)
-	(wire
-		(pts
-			(xy 203.2 58.42) (xy 223.52 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad87eb11-ac06-5a7f-9be8-0a7f1e4e2c52")
+		(uuid "5204a319-8433-5be9-b9f0-f5d2c6f4dd69")
 	)
 	(junction
-		(at 203.2 58.42)
+		(at 205.74 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "31eaab36-90db-52cb-ba04-95804325c2b2")
+		(uuid "16e6e5f8-d99a-5e9d-bc08-b453740e350a")
 	)
 	(wire
 		(pts
-			(xy 203.2 58.42) (xy 203.2 60.96)
+			(xy 205.74 53.34) (xy 205.74 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a5a7007-1204-5cff-a7b9-3b7852d33ea8")
+		(uuid "fa5e3ce7-dfb9-5739-9029-da86968eb07e")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 203.2 60.96 0)
+		(at 205.74 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4451,7 +4755,7 @@
 		(dnp no)
 		(uuid "9a3469a9-ce47-5a11-9d0d-25573b820e56")
 		(property "Reference" "#PWR0409"
-			(at 203.2 55.96 0)
+			(at 205.74 50.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4462,7 +4766,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 203.2 64.77 0)
+			(at 205.74 59.690000000000005 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4472,7 +4776,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 60.96 0)
+			(at 205.74 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4483,7 +4787,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 60.96 0)
+			(at 205.74 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4494,7 +4798,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 60.96 0)
+			(at 205.74 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4517,8 +4821,8 @@
 		)
 	)
 	(symbol
-		(lib_id "MV:SD-50A-24")
-		(at 177.8 88.9 0)
+		(lib_id "MV:USB_Device")
+		(at 233.68 62.23 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4526,9 +4830,32 @@
 		(on_board no)
 		(in_pos_files no)
 		(dnp no)
-		(uuid "74ff85ea-f5d5-5d53-838e-181ed3992415")
-		(property "Reference" "PS401"
-			(at 177.8 82.55 0)
+		(uuid "5ff4454c-9fb3-58f7-8da9-a6994fe3ee72")
+		(property "Reference" "A407"
+			(at 243.84 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GPM462C guide camera"
+			(at 243.84 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 62.23 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4537,8 +4864,113 @@
 				)
 			)
 		)
-		(property "Value" "Mean Well SD-50A-24"
-			(at 177.8 95.25 0)
+		(property "Datasheet" ""
+			(at 233.68 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Guide camera, powered by its USB cable from PPBA hub port 2"
+			(at 233.68 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07a1c44f-868d-569d-9c22-20dbe34c9c7e")
+		)
+		(pin "2"
+			(uuid "fb007116-136f-5ee4-b407-e93c54e32ed6")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "A407")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 60.96) (xy 223.52 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68bda250-c163-51b1-8799-335815a4c9ac")
+	)
+	(wire
+		(pts
+			(xy 198.12 63.5) (xy 205.74 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1d99418-af33-57ce-a04f-21a824900806")
+	)
+	(wire
+		(pts
+			(xy 205.74 63.5) (xy 223.52 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4c687d6-691e-5553-8b8c-c3856b6a7029")
+	)
+	(junction
+		(at 205.74 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1f9aae37-6ea3-5a8f-a15c-b93ceb5c5e06")
+	)
+	(wire
+		(pts
+			(xy 205.74 63.5) (xy 205.74 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c633fd1c-1709-51f9-a35c-92669ba4cb39")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 205.74 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "6e117501-5896-568f-895a-f9915988010b")
+		(property "Reference" "#PWR0410"
+			(at 205.74 61.040000000000006 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 205.74 69.85000000000001 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4548,7 +4980,491 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 88.9 0)
+			(at 205.74 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0c9f61d5-49a1-57b6-bc31-cd2c487dab1c")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "#PWR0410")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MV:USB_Device")
+		(at 233.68 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "b955040e-e83f-5239-8d3c-e143666984b3")
+		(property "Reference" "A408"
+			(at 243.84 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "AAF autofocuser"
+			(at 243.84 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Autofocuser, powered by its USB cable from PPBA hub port 4"
+			(at 233.68 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "608785e2-1748-520f-8287-7713fb355410")
+		)
+		(pin "2"
+			(uuid "a20695f5-4fca-5d16-b89d-f216b956b418")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "A408")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 71.12) (xy 223.52 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80dd5d13-410b-5557-a044-79fe951ca6b5")
+	)
+	(wire
+		(pts
+			(xy 198.12 73.66) (xy 205.74 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ba71de5-bce0-5e4a-996d-2d2ed9f70ad1")
+	)
+	(wire
+		(pts
+			(xy 205.74 73.66) (xy 223.52 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97667ca0-810a-5b8c-a3b5-fbfe0169b674")
+	)
+	(junction
+		(at 205.74 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dbbb6c66-fbea-5da2-b1e7-02caefbfda3e")
+	)
+	(wire
+		(pts
+			(xy 205.74 73.66) (xy 205.74 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74d001a8-1db8-5908-a632-92eb214bd91a")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 205.74 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "6e8f58c3-646f-5984-a48e-5b5533228bd6")
+		(property "Reference" "#PWR0411"
+			(at 205.74 71.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 205.74 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cdd734fa-e6e2-554a-8b76-848de01bf5b6")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "#PWR0411")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MV:Dew_Heater")
+		(at 233.68 82.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "cc81b7fe-e89d-5e17-97ba-56719b60598e")
+		(property "Reference" "A409"
+			(at 243.84 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Secondary dew heater (model open)"
+			(at 243.84 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 233.68 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 233.68 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dew heater strip on the secondary mirror, PPBA dew port A (RCA)"
+			(at 233.68 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8ba1a261-15e3-5bcb-946e-ddcf5eca7efc")
+		)
+		(pin "2"
+			(uuid "d97497b1-f320-597a-83f5-8c96edc798cf")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "A409")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 198.12 81.28) (xy 223.52 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "216a27cb-b343-5b22-933d-e118a54b3e64")
+	)
+	(wire
+		(pts
+			(xy 198.12 83.82) (xy 205.74 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89bbdb51-5593-5f99-8d53-7d60f05a2eef")
+	)
+	(wire
+		(pts
+			(xy 205.74 83.82) (xy 223.52 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c381b6d1-e8c9-5320-aba5-3079bcb4e14f")
+	)
+	(junction
+		(at 205.74 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "02c02d04-6fc9-53dc-b505-bd37923f2f45")
+	)
+	(wire
+		(pts
+			(xy 205.74 83.82) (xy 205.74 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cf75b53-d4e0-5821-92c3-317fc60c07d3")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 205.74 86.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "1f77e012-0372-5e8a-afe2-cb77c3ca6a45")
+		(property "Reference" "#PWR0412"
+			(at 205.74 81.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 205.74 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 205.74 86.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7294a5cf-7784-53ac-ba4c-db04cbffa4ef")
+		)
+		(instances
+			(project "mv-telescope-hat"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
+					(reference "#PWR0412")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MV:SD-50A-24")
+		(at 177.8 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "74ff85ea-f5d5-5d53-838e-181ed3992415")
+		(property "Reference" "PS401"
+			(at 177.8 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Mean Well SD-50A-24"
+			(at 177.8 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4559,7 +5475,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.meanwell.com/Upload/PDF/SD-50/SD-50-SPEC.PDF"
-			(at 177.8 88.9 0)
+			(at 177.8 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4570,7 +5486,7 @@
 			)
 		)
 		(property "Description" "Isolated DC-DC: 9.2-18 V in, 24 V 2.1 A (50 W) out. Feeds only the two drivers"
-			(at 177.8 88.9 0)
+			(at 177.8 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4606,47 +5522,47 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 86.36) (xy 165.1 86.36)
+			(xy 146.05 96.52) (xy 165.1 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "7730b758-7cf4-55fc-982f-8cd1e98a1471")
+		(uuid "5f8b23c4-3b22-5eb5-b24e-ad4ce0317e9c")
 	)
 	(label "+12V_PSU"
-		(at 151.13 86.36 0)
+		(at 151.13 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "5186041b-7bbd-5dfd-ad0d-6bff426e831c")
+		(uuid "dc67671c-02f4-516d-a9d5-3edb110e21c1")
 	)
 	(wire
 		(pts
-			(xy 165.1 88.9) (xy 160.02 88.9)
+			(xy 165.1 99.06) (xy 160.02 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "03261873-983a-581a-8375-dc0938d60b3e")
+		(uuid "51f30934-84fb-56d0-be16-1dba1325884f")
 	)
 	(wire
 		(pts
-			(xy 160.02 88.9) (xy 160.02 91.44)
+			(xy 160.02 99.06) (xy 160.02 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e114cc58-dc44-5a2c-b890-5a2386d6956d")
+		(uuid "854cf11c-5c61-5e1b-adaa-a40ee1c4b3f1")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 160.02 91.44 0)
+		(at 160.02 101.6 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4654,9 +5570,9 @@
 		(on_board no)
 		(in_pos_files no)
 		(dnp no)
-		(uuid "6e117501-5896-568f-895a-f9915988010b")
-		(property "Reference" "#PWR0410"
-			(at 160.02 86.44 0)
+		(uuid "94eec1df-1b03-5345-b497-f02028883391")
+		(property "Reference" "#PWR0413"
+			(at 160.02 96.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4667,7 +5583,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 160.02 95.25 0)
+			(at 160.02 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4677,7 +5593,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 91.44 0)
+			(at 160.02 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4688,7 +5604,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 91.44 0)
+			(at 160.02 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4699,7 +5615,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.02 91.44 0)
+			(at 160.02 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4710,60 +5626,60 @@
 			)
 		)
 		(pin "1"
-			(uuid "0c9f61d5-49a1-57b6-bc31-cd2c487dab1c")
+			(uuid "d38e645c-e45d-529b-ab71-37b66b2bde0e")
 		)
 		(instances
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
-					(reference "#PWR0410")
+					(reference "#PWR0413")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(no_connect
-		(at 165.1 91.44)
-		(uuid "81ad84c6-f5e5-583a-922b-3f97b0b0b435")
+		(at 165.1 101.6)
+		(uuid "6f5ca5cc-28ac-5b03-b5e0-b049be18184e")
 	)
 	(wire
 		(pts
-			(xy 190.5 86.36) (xy 198.12 86.36)
+			(xy 190.5 96.52) (xy 198.12 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cfbc077e-1816-5b7d-b351-ab5fa476ee6b")
+		(uuid "4b597fc2-5e67-56ee-b157-4285aa015c3a")
 	)
 	(label "+24V"
-		(at 198.12 86.36 0)
+		(at 198.12 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "0034c71a-49ef-5329-add7-d06505a20f65")
+		(uuid "5fdbe3c4-503a-5359-a7fe-4e033a67306f")
 	)
 	(wire
 		(pts
-			(xy 190.5 88.9) (xy 198.12 88.9)
+			(xy 190.5 99.06) (xy 198.12 99.06)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fedf662f-f58d-53e6-a2de-2c2b60c55e9d")
+		(uuid "4e581683-cb12-58c4-bd0b-3093358b9ad1")
 	)
 	(label "24V_RTN"
-		(at 198.12 88.9 0)
+		(at 198.12 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "adc79236-e6c4-538f-bcf5-054912d08449")
+		(uuid "9f889282-df81-5080-b85c-fc88e92a09af")
 	)
 	(symbol
 		(lib_id "MV:DM542T")
@@ -5115,8 +6031,8 @@
 		(on_board no)
 		(in_pos_files no)
 		(dnp no)
-		(uuid "657763a6-ea09-566d-9e94-08ed52de95d6")
-		(property "Reference" "#PWR0411"
+		(uuid "52c697e2-b82d-5a30-9d01-5fff7bff76d1")
+		(property "Reference" "#PWR0414"
 			(at 236.22 120.73 0)
 			(hide yes)
 			(show_name no)
@@ -5171,12 +6087,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0dfeb221-0917-580d-9c94-e5db3c2906bd")
+			(uuid "52011e1d-559a-5b37-a316-b126682a71a5")
 		)
 		(instances
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
-					(reference "#PWR0411")
+					(reference "#PWR0414")
 					(unit 1)
 				)
 			)
@@ -5740,8 +6656,8 @@
 		(on_board no)
 		(in_pos_files no)
 		(dnp no)
-		(uuid "08df08e8-92f7-552e-85da-a0f63144c1e9")
-		(property "Reference" "#PWR0412"
+		(uuid "01fa2f88-4520-589f-8096-5feaf353706f")
+		(property "Reference" "#PWR0415"
 			(at 236.22 176.61 0)
 			(hide yes)
 			(show_name no)
@@ -5796,12 +6712,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7380ce3d-2e0f-597d-b7ba-0f6016172e49")
+			(uuid "d4a4cb8b-37b3-5ddb-87a1-6f3bc82d7383")
 		)
 		(instances
 			(project "mv-telescope-hat"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/bb96089d-18d0-5c67-bbce-836e9d264e2a"
-					(reference "#PWR0412")
+					(reference "#PWR0415")
 					(unit 1)
 				)
 			)
@@ -6038,7 +6954,7 @@
 		)
 		(uuid "a0cac677-0a3c-5952-ae69-1334428e378f")
 	)
-	(text "Battery → main fuse → kill switch → current sensor → fuse block → two branches. Top: Pegasus powerbox (A402) runs the Pi and the 12 V gear. Bottom: 24 V supply (PS401) runs the two motor drivers.\nNothing here is on the HAT PCB: every part is a separate box wired by hand. Wire: 12 AWG copper battery to fuse block, 16 AWG after it."
+	(text "Battery → main fuse → kill switch → current sensor → fuse block → two branches. Top: Pegasus powerbox (A402) runs the Pi, both cameras, the autofocuser and the dew heater. Bottom: 24 V supply (PS401) runs the two motor drivers.\nNothing here is on the HAT PCB: every part is a separate box wired by hand. Wire: 12 AWG copper battery to fuse block, 16 AWG after it."
 		(exclude_from_sim no)
 		(at 20.32 19.05 0)
 		(effects
@@ -6049,15 +6965,15 @@
 		)
 		(uuid "ce10fde1-33ea-5037-813b-e093227b3c76")
 	)
-	(text "WHY EACH PART IS HERE\nF401  15 A main fuse, within ~7 in (18 cm) of battery +. It protects the 12 AWG cable: the battery can push far more current than that cable can carry.\n          15 A, not 20 A, because the current sensor A401 is rated 15 A continuous.\nSW401  Kill switch: one switch cuts everything. To charge: switch OFF, then clip the charger onto the battery posts.\nA401  INA260 current sensor. Everything the telescope draws flows through it, so the Pi can read battery current, voltage and power over I2C (address 0x40).\n          Its I2C cable plugs into J201 on the HAT (Pi header sheet).\nF402, F403  One 10 A fuse per branch, so a fault in one branch blows only that branch's fuse. Both sit in the WUPP fuse block; its other 4 circuits are spare.\nA402  Pegasus Pocket Powerbox Advance Gen2. Takes 11.0-14.5 V and shuts every output off above 14.5 V.\n          USB port 1 (5 V, 3 A) powers the Pi. 12 V out 1 powers the main camera. Its USB hub carries the guide camera and the autofocuser; a dew port runs the heater.\nPS401  Mean Well SD-50A-24: turns 9.2-18 V into 24 V, 2.1 A (50 W) for the two drivers. FG (pin 3) stays empty.\nC401, C402  1000 uF 63 V, one across each driver's supply. When a motor slows down it pushes energy back into the 24 V line (DM542T manual 6.2).\n          The capacitor soaks that up and supplies the quick current pulses, so the 24 V stays steady.\nA403, A404  DM542T drivers. Each gets its own pair of wires from PS401, never driver-to-driver (DM542T manual 8).\n          PUL+, DIR+, ENA+ sit on +5V. The 74ACT244 on the HAT pulls PUL-, DIR-, ENA- low to switch each input on. ENA- low = driver OFF.\n          ALM+ / ALM- (the fault output) are not used yet.\n\nTWO GROUNDS\nGND        The Pi's ground = battery minus. Treat them as one wire: the powerbox and the main camera both plug into the Pi over USB, and a USB cable joins grounds.\n               Every GND wire on this sheet lands on the fuse block's negative bus bar.\n24V_RTN  The 24 V supply's own minus. PS401 is isolated (1.5 kV between input and output), so 24V_RTN is NOT joined to GND.\n               It goes only to the two drivers and C401 / C402. The drivers' signal inputs are optocouplers, so the HAT never needs 24V_RTN.\n\nOPEN\nMotors M401, M402: ALT 23HS39-5004S is proposed (on hold). AZ is a 17HS19-2004S1 or a second 23HS39, waiting on the torque numbers.\n     The drivers' current switches (SW1-SW3) are set from the motor pick.\nPS401 is 50 W shared by both drivers. Re-check it once the motors and current settings are picked (DM542T manual 6.1: a shared supply needs enough power for every driver on it).\nNot bought yet: PS401 (SD-50A-24), F401's holder (Powerwerx IFH-12-02), C401 + C402 (Nichicon 1000 uF 63 V), A401 (Adafruit INA260, 4226).\nNot drawn yet: mirror fan power, surge protection (the August plan had a 1.5KE33CA TVS diode), the dew heater model."
+	(text "WHY EACH PART IS HERE\nF401  15 A main fuse, within ~7 in (18 cm) of battery +. It protects the 12 AWG cable: the battery can push far more current than that cable can carry.\n          15 A, not 20 A, because the current sensor A401 is rated 15 A continuous.\nSW401  Kill switch: one switch cuts everything. To charge: switch OFF, then clip the charger onto the battery posts.\nA401  INA260 current sensor. Everything the telescope draws flows through it, so the Pi can read battery current, voltage and power over I2C (address 0x40).\n          Its I2C cable plugs into J201 on the HAT (Pi header sheet). VCC on +3V3: its I2C pull-ups go to VCC, and the Pi's pins 3 and 5 take 3.3 V only.\n          VBUS (X): the board's VB jumper already ties it to VIN+. ALERT (X): not used, the Pi reads the sensor over I2C instead (TI datasheet 8.3.3.2 allows it).\nF402, F403  One 10 A fuse per branch, so a fault in one branch blows only that branch's fuse. Both sit in the WUPP fuse block; its other 4 circuits are spare.\nA402  Pegasus Pocket Powerbox Advance Gen2. Takes 11.0-14.5 V and shuts every output off above 14.5 V.\n          Hub port 1 (5 V, up to 3 A) powers the Pi. Never switch port 1 off in software (ports 1 and 2 can be): the Pi would cut its own power.\n          12 V out 1 powers the main camera. Hub port 2 powers the guide camera, hub port 4 the autofocuser. Dew port A runs the secondary heater.\n          Data: the PPBA's USB3 type-B socket goes to a Pi USB3 port, so the Pi reaches all three devices through the hub. The main camera's USB3 cable goes to hub port 3.\nPS401  Mean Well SD-50A-24: turns 9.2-18 V into 24 V, 2.1 A (50 W) for the two drivers. FG (pin 3) stays empty.\nC401, C402  1000 uF 63 V, one across each driver's supply. When a motor slows down it pushes energy back into the 24 V line (DM542T manual 6.2).\n          The capacitor soaks that up and supplies the quick current pulses, so the 24 V stays steady.\nA403, A404  DM542T drivers. Each gets its own pair of wires from PS401, never driver-to-driver (DM542T manual 8).\n          PUL+, DIR+, ENA+ sit on +5V. The 74ACT244 on the HAT pulls PUL-, DIR-, ENA- low to switch each input on. ENA- low = driver OFF.\n          ALM+ / ALM- (the fault output) are not used yet.\n\nTWO GROUNDS\nGND        The Pi's ground = battery minus. Treat them as one wire: the powerbox and the main camera both plug into the Pi over USB, and a USB cable joins grounds.\n               Every GND wire on this sheet lands on the fuse block's negative bus bar.\n24V_RTN  The 24 V supply's own minus. PS401 is isolated (1.5 kV between input and output), so 24V_RTN is NOT joined to GND.\n               It goes only to the two drivers and C401 / C402. The drivers' signal inputs are optocouplers, so the HAT never needs 24V_RTN.\n\nOPEN\nMotors M401, M402: ALT 23HS39-5004S is proposed (on hold). AZ is a 17HS19-2004S1 or a second 23HS39, waiting on the torque numbers.\n     The drivers' current switches (SW1-SW3) are set from the motor pick.\nPS401 is 50 W shared by both drivers. Re-check it once the motors and current settings are picked (DM542T manual 6.1: a shared supply needs enough power for every driver on it).\nNot bought yet: PS401 (SD-50A-24), F401's holder (Powerwerx IFH-12-02), C401 + C402 (Nichicon 1000 uF 63 V), A401 (Adafruit INA260, 4226).\nDew heater A409: model open (SV192 strip, R-Sky S and a 12 V 7 W film are all on the lists).\nNot drawn yet: mirror fan, power source not decided (PPBA dew port B gives speed control; a 12 V output runs it flat out). Surge protection (the August plan had a 1.5KE33CA TVS diode)."
 		(exclude_from_sim no)
-		(at 20.32 101.6 0)
+		(at 20.32 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
-		(uuid "9cf10d12-5881-59ce-82c9-ef71180a37eb")
+		(uuid "f9ab369a-71a7-504a-b40c-0e7d6a5c5c0f")
 	)
 )

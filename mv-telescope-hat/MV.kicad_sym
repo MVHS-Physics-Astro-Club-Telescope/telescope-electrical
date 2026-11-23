@@ -221,7 +221,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "A"
-			(at 0 10.16 0)
+			(at 0 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -229,7 +229,7 @@
 			)
 		)
 		(property "Value" "PPBA_Gen2"
-			(at 0 -10.16 0)
+			(at 0 -27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -265,8 +265,8 @@
 		)
 		(symbol "PPBA_Gen2_0_1"
 			(rectangle
-				(start -12.7 8.89)
-				(end 12.7 -8.89)
+				(start -12.7 26.67)
+				(end 12.7 -26.67)
 				(stroke
 					(width 0.254)
 					(type default)
@@ -278,7 +278,7 @@
 		)
 		(symbol "PPBA_Gen2_1_1"
 			(pin passive line
-				(at -15.24 6.35 0)
+				(at -15.24 24.13 0)
 				(length 2.54)
 				(name "IN+"
 					(effects
@@ -296,7 +296,7 @@
 				)
 			)
 			(pin passive line
-				(at -15.24 3.81 0)
+				(at -15.24 21.59 0)
 				(length 2.54)
 				(name "IN-"
 					(effects
@@ -314,7 +314,7 @@
 				)
 			)
 			(pin power_out line
-				(at 15.24 6.35 180)
+				(at 15.24 24.13 180)
 				(length 2.54)
 				(name "USB1_5V"
 					(effects
@@ -332,7 +332,7 @@
 				)
 			)
 			(pin passive line
-				(at 15.24 3.81 180)
+				(at 15.24 21.59 180)
 				(length 2.54)
 				(name "USB1_GND"
 					(effects
@@ -350,7 +350,7 @@
 				)
 			)
 			(pin passive line
-				(at 15.24 -3.81 180)
+				(at 15.24 8.89 180)
 				(length 2.54)
 				(name "OUT1+"
 					(effects
@@ -368,7 +368,7 @@
 				)
 			)
 			(pin passive line
-				(at 15.24 -6.35 180)
+				(at 15.24 6.35 180)
 				(length 2.54)
 				(name "OUT1-"
 					(effects
@@ -378,6 +378,114 @@
 					)
 				)
 				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 15.24 -1.27 180)
+				(length 2.54)
+				(name "USB2_5V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -3.81 180)
+				(length 2.54)
+				(name "USB2_GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 15.24 -11.43 180)
+				(length 2.54)
+				(name "USB4_5V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -13.97 180)
+				(length 2.54)
+				(name "USB4_GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -21.59 180)
+				(length 2.54)
+				(name "DEW_A+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 -24.13 180)
+				(length 2.54)
+				(name "DEW_A-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -631,6 +739,212 @@
 				(at -10.16 -1.27 0)
 				(length 2.54)
 				(name "12V-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "USB_Device"
+		(pin_numbers
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "A"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_Device"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Device powered from a USB port: 5 V in on the USB cable"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "USB_Device_0_1"
+			(rectangle
+				(start -7.62 3.81)
+				(end 7.62 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "USB_Device_1_1"
+			(pin power_in line
+				(at -10.16 1.27 0)
+				(length 2.54)
+				(name "5V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -1.27 0)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "Dew_Heater"
+		(pin_numbers
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "A"
+			(at 0 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Dew_Heater"
+			(at 0 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dew heater strip on a PPBA dew port: 12-13.8 V PWM, up to 5 A per port"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "Dew_Heater_0_1"
+			(rectangle
+				(start -7.62 3.81)
+				(end 7.62 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "Dew_Heater_1_1"
+			(pin passive line
+				(at -10.16 1.27 0)
+				(length 2.54)
+				(name "PWM+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -1.27 0)
+				(length 2.54)
+				(name "PWM-"
 					(effects
 						(font
 							(size 1.27 1.27)
